@@ -1,0 +1,77 @@
+.ir {
+    display: block;
+    overflow: visible;
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.ir>* {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.soc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.soc li {
+    display: inline-block;
+}
+
+.soc a,
+.soc svg {
+    display: flex;
+}
+
+.soc a {
+    height: 100%;
+    width: 100%;
+}
+
+.twitter {
+    fill: #26b5d9
+}
+
+.twitter:hover {
+    background: #26b5d9
+}
+
+.facebook {
+    fill: #264ad9
+}
+
+.facebook:hover {
+    background: #264ad9
+}
+
+.paypal {
+    fill: #2626d9
+}
+
+.paypal:hover {
+    background: #2626d9
+}
+
+.instagram {
+    fill: #d9264a
+}
+
+.instagram:hover {
+    background: #d9264a
+}
+
+.youtube {
+    fill: #d92626
+}
+
+.youtube:hover {
+    background: #d92626
+}
