@@ -1,4 +1,4 @@
-const sr=ScrollReveal({distance:'60px',duration:2800,reset:1,})
+const sr=ScrollReveal({distance:'60px',duration:2800,reset:0,})
 sr.reveal('.section__title',{origin:'top',})
 sr.reveal('.section__subtitle',{origin:'top',distance:'30px'})
 sr.reveal('.home__social a', {origin:'left', interval: 10, delay: 400})
