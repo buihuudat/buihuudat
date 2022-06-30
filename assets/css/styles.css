@@ -462,12 +462,12 @@ section .section__subtitle::after {
 }
 
 .home__blob {
-    width: 200px;
+    width: 250px;
     fill: var(--first-color);
 }
 
 .home__blob-img{
-    width: 170px;
+    width: 220px;
 }
 
 .home__data {
