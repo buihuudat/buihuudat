@@ -5,13 +5,13 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=buihuudat" alt="buihuudat" /></a> </p>
 
-<p align="left"> <a href="https://facebook.com/1150694301" target="blank"><img src="https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&labelColor=black&logo=facebook" alt="Bui Huu Dat" /></a> </p>
+<p align="left"> <a href="https://facebook.com/1150694301" target="blank"><img src="https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&labelColor=white&logo=facebook" alt="Bui Huu Dat" /></a> </p>
 
 <p align="left"> <a href="https://instagram.com/buihuudat_" target="blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="dat54261001" /></a> </p>
 
 - 🌱 I’m currently learning **React, NodeJs**
 
-- 👨‍💻 All of my projects are available at <b>[Bui Huu Dat]</b>(https://buihuudat.vercel.app/)
+- 👨‍💻 All of my projects are available at [Bui Huu Dat](https://buihuudat.vercel.app/)
 
 - 💬 Ask me about **React, PHP**
 
