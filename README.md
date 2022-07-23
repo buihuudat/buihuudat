@@ -1,4 +1,6 @@
-<h1 align="center">Hi there 👋, I'm Huu Dat</h1>
+![Header](./your-header-image-name.png)
+
+
 <h3 align="center">I'm a [![Typing SVG](https://readme-typing-svg.herokuapp.com?lines=developer;designer;freelancer)](https://git.io/typing-svg).</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=buihuudat&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="buihuudat" /> </p>
