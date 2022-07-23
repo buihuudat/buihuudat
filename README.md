@@ -1,4 +1,4 @@
-![Header](./your-header-image-name.png)
+![Header](./github-header-image.png)
 
 
 <h3 align="center">I'm a [![Typing SVG](https://readme-typing-svg.herokuapp.com?lines=developer;designer;freelancer)](https://git.io/typing-svg).</h3>
