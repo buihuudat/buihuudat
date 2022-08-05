@@ -1,6 +1,6 @@
 <h1 align="center">Hi there 👋, I'm Huu Dat</h1>
 <h3 align="center">I'm a <br/>
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=developer;designer;freelancer&font=Fira%20Code&center=true&width=380&height=50">.
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=developer;designer;freelancer&font=Fira%20Code&center=true&width=380&height=50">
 </h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=buihuudat&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="buihuudat" /> </p>
