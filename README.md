@@ -9,7 +9,7 @@
 
 <p align="left"> <a href="https://facebook.com/1150694301" target="_blank"><img src="https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&labelColor=white&logo=facebook" alt="Bui Huu Dat" /></a> </p>
 
-<p align="left"> <a href="https://instagram.com/buihuudat_" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="dat54261001" /></a> </p>
+<p align="left"> <a href="https://instagram.com/bh_d2610" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="dat54261001" /></a> </p>
 
 - 🌱 I’m currently learning **React, NodeJs**
 
