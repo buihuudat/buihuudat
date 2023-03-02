@@ -33,7 +33,8 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=buihuudat&&theme=prussian" alt="buihuudat" /></p>
 
-![BuiHuuDat's GitHub stats](https://github-readme-stats.vercel.app/api/wakatime?username=buihuudat&hide=contribs,prs)
+![HoangTran's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=HoangTran0410&theme=tokyonight)
+
 
 ## My Skill Set  
 <table><tr><td valign="top" width="33%">
