@@ -32,8 +32,7 @@
 <br/><p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=buihuudat&show_icons=true&theme=prussian &locale=en&layout=compact" alt="buihuudat" /></p><br/>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=buihuudat&&theme=prussian" alt="buihuudat" /></p>
-
-![BuiHuuDat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=buihuudat&theme=tokyonight)
+<!-- ![BuiHuuDat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=buihuudat&theme=tokyonight) -->
 
 
 ## My Skill Set  
