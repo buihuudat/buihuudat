@@ -936,11 +936,11 @@ section .section__subtitle::after {
 }
 
 .skills__react {
-    width: 35%;
+    width: 54%;
 }
 
 .skills__react::after {
-    content: "35%";
+    content: "54%";
 }
 
 .skills__mysql {
