@@ -11,7 +11,6 @@
 
 - 📫 How to reach me **buihuudat.dev@gmail.com**
 
-- ⚡ Fun fact **Handsome, lots of money are things I don't have. </br> But I have enthusiasm in my work.**
 
 
 
