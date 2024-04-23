@@ -26,8 +26,7 @@
 <!-- ![BuiHuuDat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=buihuudat&theme=tokyonight) -->
 
 
-## My Skill Set  
-<table><tr><td valign="top" width="33%">
+
 
 
 
