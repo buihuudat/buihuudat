@@ -3,14 +3,6 @@
   <img src="https://readme-typing-svg.herokuapp.com/?lines=developer;designer;freelancer&font=Fira%20Code&center=true&width=380&height=50">
 </h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=buihuudat&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="buihuudat" /> </p>
-
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=buihuudat" alt="buihuudat" /></a> </p>
-
-<p align="left"> <a href="https://facebook.com/1150694301" target="_blank"><img src="https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&labelColor=white&logo=facebook" alt="Bui Huu Dat" /></a> </p>
-
-<p align="left"> <a href="https://instagram.com/bh_d2610" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="dat54261001" /></a> </p>
-
 - 🌱 I’m currently learning **React, NodeJs**
 
 - 👨‍💻 All of my projects are available at [Bui Huu Dat](https://buihuudat.vercel.app/)
