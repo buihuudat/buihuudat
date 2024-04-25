@@ -5,8 +5,7 @@
 
 - 🌱 I’m currently learning **React, NodeJs**
 
-- 👨‍💻 All of my projects are available at [Bui Huu Dat](https://buihuudat?.vercel.app/)
-
+- 👨‍💻 All of my projects are available at [Bui Huu Dat]
 - 💬 Ask me about **React**
 
 - 📫 How to reach me **buihuudat.dev@gmail.com**
