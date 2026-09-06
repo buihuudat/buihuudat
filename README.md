@@ -17,23 +17,33 @@
 </p>
 
 <p align="center">
-  <a href="mailto:buihuudat.dev@gmail.com">
-    <img src="https://img.shields.io/badge/Email-buihuudat.dev%40gmail.com-0f172a?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/buihuudat">
-    <img src="https://img.shields.io/badge/GitHub-buihuudat-0f172a?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://instagram.com/buihuudat_">
-    <img src="https://img.shields.io/badge/Instagram-buihuudat_-0f172a?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
+  <a href="mailto:buihuudat.dev@gmail.com"><img src="https://img.shields.io/badge/Email-0f172a?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/buihuudat"><img src="https://img.shields.io/badge/GitHub-0f172a?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://instagram.com/buihuudat_"><img src="https://img.shields.io/badge/Instagram-0f172a?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+  <a href="https://twitter.com/dat54261001"><img src="https://img.shields.io/badge/X%20%2F%20Twitter-0f172a?style=for-the-badge&logo=x&logoColor=white" /></a>
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=buihuudat&label=PROFILE%20VIEWS&color=2563eb&style=for-the-badge" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/buihuudat?label=FOLLOWERS&style=for-the-badge&color=2563eb" alt="Followers" />
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20WORK-22c55e?style=for-the-badge" alt="Status" />
 </p>
 
 <br>
+
+<!-- ========================================================= -->
+<!--                    NAVIGATION / TOC                        -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <a href="#-about-me">About</a> •
+  <a href="#-what-i-do">Skills</a> •
+  <a href="#%EF%B8%8F-tech-stack">Tech Stack</a> •
+  <a href="#-github-metrics">Metrics</a> •
+  <a href="#-featured-projects">Projects</a> •
+  <a href="#%EF%B8%8F-configuration-guide">Config</a> •
+  <a href="#-connect-with-me">Connect</a>
+</p>
 
 ---
 
@@ -49,21 +59,8 @@ const huuDat = {
   role: "Frontend / Full-Stack Developer",
   location: "Vietnam 🇻🇳",
 
-  focus: [
-    "React",
-    "Next.js",
-    "Node.js",
-    "TypeScript",
-    "UI/UX"
-  ],
-
-  backend: [
-    "Node.js",
-    "Express.js",
-    "PostgreSQL",
-    "Redis",
-    "WebSocket"
-  ],
+  focus: ["React", "Next.js", "Node.js", "TypeScript", "UI/UX"],
+  backend: ["Node.js", "Express.js", "PostgreSQL", "Redis", "WebSocket"],
 
   interestedIn: [
     "System Design",
@@ -73,19 +70,8 @@ const huuDat = {
     "Cloud & DevOps"
   ],
 
-  building: [
-    "CRM",
-    "Multi-channel Chat",
-    "AI-powered Applications",
-    "Mobile Applications"
-  ],
-
-  askMeAbout: [
-    "React",
-    "Next.js",
-    "Frontend Architecture",
-    "Web Development"
-  ],
+  building: ["CRM", "Multi-channel Chat", "AI-powered Applications", "Mobile Applications"],
+  askMeAbout: ["React", "Next.js", "Frontend Architecture", "Web Development"],
 
   mindset: "Build → Learn → Improve → Repeat 🚀",
   funFact: "I turn ☕ into code."
@@ -107,46 +93,40 @@ const huuDat = {
 
 <table>
 <tr>
-<td width="33%" align="center">
+<td width="33%" valign="top">
 
 ### 🎨 Frontend
+<img src="https://img.shields.io/badge/React-0f172a?style=flat-square&logo=react&logoColor=61DAFB" /><br/>
+<img src="https://img.shields.io/badge/Next.js-0f172a?style=flat-square&logo=nextdotjs&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/TypeScript-0f172a?style=flat-square&logo=typescript&logoColor=3178C6" /><br/>
+<img src="https://img.shields.io/badge/TailwindCSS-0f172a?style=flat-square&logo=tailwindcss&logoColor=38BDF8" /><br/>
+<img src="https://img.shields.io/badge/Ionic-0f172a?style=flat-square&logo=ionic&logoColor=3880FF" />
 
-⚛️ React
-▲ Next.js
-📘 TypeScript
-🎨 TailwindCSS
-📱 Ionic
-🧩 Component Architecture
-⚡ Performance
-📱 Responsive UI
+**Focus:** Component Architecture · Performance · Responsive UI
 
 </td>
-<td width="33%" align="center">
+<td width="33%" valign="top">
 
 ### ⚙️ Backend
+<img src="https://img.shields.io/badge/Node.js-0f172a?style=flat-square&logo=nodedotjs&logoColor=339933" /><br/>
+<img src="https://img.shields.io/badge/Express-0f172a?style=flat-square&logo=express&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/PostgreSQL-0f172a?style=flat-square&logo=postgresql&logoColor=4169E1" /><br/>
+<img src="https://img.shields.io/badge/Redis-0f172a?style=flat-square&logo=redis&logoColor=DC382D" /><br/>
+<img src="https://img.shields.io/badge/WebSocket-0f172a?style=flat-square&logo=socketdotio&logoColor=white" />
 
-🟢 Node.js
-🚂 Express.js
-🌐 REST API
-🔌 WebSocket
-🐘 PostgreSQL
-🔴 Redis
-📨 Event-driven Systems
-🔐 Authentication
+**Focus:** REST API · Event-driven Systems · Authentication
 
 </td>
-<td width="33%" align="center">
+<td width="33%" valign="top">
 
 ### 🚀 Engineering
+<img src="https://img.shields.io/badge/System%20Design-0f172a?style=flat-square&logo=icloud&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/AI%20Integration-0f172a?style=flat-square&logo=openai&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/CRM-0f172a?style=flat-square&logo=hubspot&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/Analytics-0f172a?style=flat-square&logo=googleanalytics&logoColor=white" /><br/>
+<img src="https://img.shields.io/badge/Cloud%20%26%20DevOps-0f172a?style=flat-square&logo=docker&logoColor=2496ED" />
 
-🏗️ System Design
-🤖 AI Integration
-💬 Multi-channel Chat
-👥 CRM
-📊 Analytics
-🔄 Real-time Systems
-☁️ Cloud & DevOps
-⚡ Optimization
+**Focus:** Real-time Systems · Multi-channel Chat · Optimization
 
 </td>
 </tr>
@@ -158,17 +138,17 @@ const huuDat = {
 
 ## 🛠️ Tech Stack
 
-**💻 Languages & Frontend**
+<p align="center"><b>Languages & Frontend</b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,bootstrap,ionic&perline=9" alt="Frontend technologies" />
 </p>
 
-**⚙️ Backend & Database**
+<p align="center"><b>Backend & Database</b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,redis,mongodb,kafka&perline=6" alt="Backend technologies" />
 </p>
 
-**🔧 Tools & Infrastructure**
+<p align="center"><b>Tools & Infrastructure</b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=git,github,docker,linux,nginx,figma,vscode&perline=7" alt="Tools" />
 </p>
@@ -177,77 +157,63 @@ const huuDat = {
 <!--                       TERMINAL                            -->
 <!-- ========================================================= -->
 
-## 💻 Developer Terminal
+<details>
+<summary><b>💻 Developer Terminal</b> (click để xem)</summary>
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │  huu-dat@developer:~$ whoami                                  │
-│                                                                │
-│  Bui Huu Dat                                                  │
-│  Frontend / Full-Stack Developer                              │
-│                                                                │
-│  huu-dat@developer:~$ skills                                  │
-│                                                                │
-│  ✓ React                                                      │
-│  ✓ Next.js                                                     │
-│  ✓ TypeScript                                                  │
-│  ✓ Node.js                                                     │
-│  ✓ PostgreSQL                                                  │
-│  ✓ Redis                                                       │
-│  ✓ WebSocket                                                    │
-│  ✓ AI Integration                                               │
+│  Bui Huu Dat — Frontend / Full-Stack Developer                │
 │                                                                │
 │  huu-dat@developer:~$ system --status                          │
-│                                                                │
 │  Frontend       [████████████████████] READY                  │
 │  Backend        [██████████████████░░] READY                  │
 │  Database       [██████████████████░░] READY                  │
 │  AI             [████████████████░░░░] LEARNING                │
 │                                                                │
 │  huu-dat@developer:~$ npm run build                            │
-│                                                                │
 │  ✓ Compiled successfully                                        │
 │  ✓ Ready for production                                         │
-│                                                                │
 │  huu-dat@developer:~$ _                                         │
 └──────────────────────────────────────────────────────────────┘
 ```
 
+</details>
+
 <!-- ========================================================= -->
-<!--                   GITHUB OVERVIEW                          -->
+<!--                   GITHUB METRICS                          -->
 <!-- ========================================================= -->
 
-## 🔥 GitHub Stats
+## 📊 GitHub Metrics
 
 <p align="center">
-  <img src="https://img.shields.io/github/repos/buihuudat?label=PUBLIC%20REPOSITORIES&style=for-the-badge&logo=github&color=2563eb" alt="Repositories" />
-  <img src="https://img.shields.io/github/followers/buihuudat?label=FOLLOWERS&style=for-the-badge&logo=github&color=7c3aed" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/buihuudat?label=STARS&style=for-the-badge&logo=github&color=0891b2" alt="Stars" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.base.svg" alt="Base metrics" width="100%" />
 </p>
+
+<table>
+<tr>
+<td width="50%">
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.languages.svg" alt="Top languages" width="100%" />
+</td>
+<td width="50%">
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.achievements.svg" alt="Achievements" width="100%" />
+</td>
+</tr>
+</table>
+
 <p align="center">
-  <img src="https://img.shields.io/github/commit-activity/y/buihuudat/buihuudat?label=YEARLY%20ACTIVITY&style=for-the-badge&logo=github&color=059669" alt="Yearly Activity" />
-  <img src="https://img.shields.io/github/last-commit/buihuudat/buihuudat?label=LAST%20UPDATE&style=for-the-badge&logo=github&color=ea580c" alt="Last Update" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.isocalendar.svg" alt="Contribution calendar" width="100%" />
 </p>
-
-> Đã bỏ `github-readme-stats.vercel.app`, `github-readme-activity-graph.vercel.app` và `github-readme-streak-stats.herokuapp.com` vì đây là 3 nguồn hay bị chết/rate-limit gây ảnh vỡ. Thay bằng badge shields.io ổn định hơn.
-
-<!-- ========================================================= -->
-<!--                CONTRIBUTION ACTIVITY (SNAKE)               -->
-<!-- ========================================================= -->
-
-## 📊 Contribution Activity
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buihuudat/buihuudat/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buihuudat/buihuudat/output/github-contribution-grid-snake.svg" />
-    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/buihuudat/buihuudat/output/github-contribution-grid-snake.svg" />
+    <img alt="Contribution snake" src="https://raw.githubusercontent.com/buihuudat/buihuudat/output/github-contribution-grid-snake.svg" width="100%" />
   </picture>
 </p>
 
-<p align="center"><i>Every contribution tells a story. Every commit is a step forward. 🚀</i></p>
-
-> Ảnh snake này do chính GitHub Action `snake.yml` của bạn tạo ra và đẩy lên branch `output` — không phụ thuộc bên thứ ba nào, nên sẽ không bao giờ bị vỡ vì lỗi service ngoài. Xem phần "Cách kích hoạt" bên dưới.
+> Toàn bộ card trên do **chính GitHub Action của bạn** sinh ra (`metrics.yml` + `snake.yml`) và commit thẳng vào repo — không phụ thuộc `vercel.app` hay `herokuapp.com` nên sẽ không bao giờ vỡ ảnh vì lỗi dịch vụ ngoài.
 
 <!-- ========================================================= -->
 <!--                   FEATURED PROJECTS                        -->
@@ -257,80 +223,68 @@ const huuDat = {
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 💬 Multi-Channel CRM
 A unified customer communication platform connecting multiple channels into a single workspace.
 
-**Features**
-💬 Unified conversations · 🤖 AI assistant · 👥 Customer management · 📊 Analytics · 🔌 Multi-channel integrations · ⚡ Real-time messaging · 🔄 CRM synchronization · 📞 Call center integration
+**Features:** Unified conversations · AI assistant · Customer management · Analytics · Multi-channel integrations · Real-time messaging · CRM sync · Call center integration
 
-**Stack**
-`React` `Next.js` `Node.js` `PostgreSQL` `Redis` `WebSocket`
+<img src="https://img.shields.io/badge/React-2563eb?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Next.js-1d4ed8?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-0f172a?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/WebSocket-059669?style=flat-square&logoColor=white" />
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🤖 AI Applications
 AI-powered applications designed around real-world business workflows.
 
-**Features**
-🧠 Context-aware AI · 💬 Intelligent conversations · 🔍 Intent detection · 🛡️ Spam detection · 🤖 AI automation · 📝 Prompt engineering · 🔄 AI workflows
+**Features:** Context-aware AI · Intelligent conversations · Intent detection · Spam detection · AI automation · Prompt engineering · AI workflows
 
-**Goal**
-Build AI that understands context, not just individual messages.
+**Goal:** Build AI that understands context, not just individual messages.
 
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 📱 Mobile Applications
 Cross-platform applications built with modern React technologies.
 
-**Technology**
-`React` `Ionic` `Capacitor` `TypeScript` `REST API` `WebSocket`
+<img src="https://img.shields.io/badge/React-2563eb?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Ionic-0891b2?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Capacitor-119EFF?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logoColor=white" />
 
-**Capabilities**
-iOS · Android · Push Notification · Camera · Geolocation · In-App Purchase
+**Capabilities:** iOS · Android · Push Notification · Camera · Geolocation · In-App Purchase
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🏫 STEMTOWN
 Modern education platform focused on performance, SEO and user experience.
 
-**Stack**
-`Next.js` `React` `TailwindCSS` `TypeScript`
+<img src="https://img.shields.io/badge/Next.js-1d4ed8?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/React-2563eb?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logoColor=white" />
 
-**Focus**
-⚡ Performance · 🔍 SEO · 📱 Responsive UI · 🎨 User Experience
+**Focus:** Performance · SEO · Responsive UI · UX
 
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🛒 3GO
 Business management and administration platform.
 
-**Stack**
-`React` `TypeScript` `REST API`
+<img src="https://img.shields.io/badge/React-2563eb?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/REST%20API-7c3aed?style=flat-square&logoColor=white" />
 
-**Focus**
-📊 Dashboard · 📈 Data Visualization · 🔌 API Integration · 👥 Business Management
+**Focus:** Dashboard · Data Visualization · API Integration · Business Management
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🏗️ Scalable Systems
 Exploring architecture for reliable and high-performance applications.
 
-**Technologies**
-`PostgreSQL` `Redis` `Kafka` `WebSocket`
+<img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/Kafka-000000?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/WebSocket-059669?style=flat-square&logoColor=white" />
 
-**Concepts**
-Event-driven Architecture · Message Queues · Caching · Idempotency · Real-time Systems · Distributed Architecture
+**Concepts:** Event-driven Architecture · Message Queues · Caching · Idempotency · Distributed Systems
 
 </td>
 </tr>
@@ -342,63 +296,29 @@ Event-driven Architecture · Message Queues · Caching · Idempotency · Real-ti
 
 ## 🌱 Currently Exploring
 
-```
-Frontend Architecture   ████████████████████████░░  90%
-React / Next.js         ████████████████████████░░  90%
-TypeScript              ██████████████████████░░░░  85%
-Node.js                 ████████████████████░░░░░░  80%
-System Design           ██████████████████░░░░░░░░  75%
-AI Integration          █████████████████░░░░░░░░░  70%
-Backend Architecture    ████████████████░░░░░░░░░░  65%
-Cloud & DevOps          ████████████░░░░░░░░░░░░░░  55%
-```
-
-<!-- ========================================================= -->
-<!--                 ENGINEERING INTERESTS                      -->
-<!-- ========================================================= -->
-
-## 🧠 Engineering Interests
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend%20Architecture-2563EB?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/System%20Design-7C3AED?style=for-the-badge&logo=icloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/AI%20Engineering-0891B2?style=for-the-badge&logo=openai&logoColor=white" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Real--time%20Systems-059669?style=for-the-badge&logo=socketdotio&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Kafka-000000?style=for-the-badge&logo=apachekafka&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloud%20%26%20DevOps-0EA5E9?style=for-the-badge&logo=icloud&logoColor=white" />
-</p>
+| Lĩnh vực | Tiến độ |
+|---|---|
+| Frontend Architecture | ████████████████████████░░ 90% |
+| React / Next.js | ████████████████████████░░ 90% |
+| TypeScript | ██████████████████████░░░░ 85% |
+| Node.js | ████████████████████░░░░░░ 80% |
+| System Design | ██████████████████░░░░░░░░ 75% |
+| AI Integration | █████████████████░░░░░░░░░ 70% |
+| Backend Architecture | ████████████████░░░░░░░░░░ 65% |
+| Cloud & DevOps | ████████████░░░░░░░░░░░░░░ 55% |
 
 <!-- ========================================================= -->
 <!--                   DEVELOPMENT FLOW                         -->
 <!-- ========================================================= -->
 
-## 🔄 My Development Flow
+## 🔄 Development Flow
 
-```
-💡 IDEA → 🔍 RESEARCH → 🎨 DESIGN → 🏗️ ARCHITECTURE → 💻 DEVELOPMENT
-   → 🧪 TESTING → 🚀 DEPLOYMENT → 📊 MONITORING → 🔧 OPTIMIZATION → 🔁 REPEAT
-```
-
-<!-- ========================================================= -->
-<!--                 DEVELOPER PHILOSOPHY                       -->
-<!-- ========================================================= -->
-
-## 🧠 Developer Philosophy
+<p align="center">
+💡 IDEA → 🔍 RESEARCH → 🎨 DESIGN → 🏗️ ARCHITECTURE → 💻 DEVELOPMENT<br/>
+→ 🧪 TESTING → 🚀 DEPLOYMENT → 📊 MONITORING → 🔧 OPTIMIZATION → 🔁 REPEAT
+</p>
 
 > "Build things that are simple to use, difficult to break, and easy to maintain."
-
-```
-THINK → RESEARCH → DESIGN → ARCHITECT → BUILD → TEST → SHIP → IMPROVE ─┐
-  ▲                                                                    │
-  └────────────────────────────────────────────────────────────────────┘
-```
 
 <!-- ========================================================= -->
 <!--                    CURRENT FOCUS                           -->
@@ -408,53 +328,37 @@ THINK → RESEARCH → DESIGN → ARCHITECT → BUILD → TEST → SHIP → IMPR
 
 <table align="center">
 <tr>
-<td align="center" width="25%">
-
-⚛️
-**Frontend**
-Building fast and scalable interfaces.
-
-</td>
-<td align="center" width="25%">
-
-🤖
-**AI**
-Making applications more intelligent.
-
-</td>
-<td align="center" width="25%">
-
-🏗️
-**Architecture**
-Designing maintainable systems.
-
-</td>
-<td align="center" width="25%">
-
-⚡
-**Performance**
-Making products faster and smoother.
-
-</td>
+<td align="center" width="25%">⚛️<br/><b>Frontend</b><br/>Building fast, scalable interfaces.</td>
+<td align="center" width="25%">🤖<br/><b>AI</b><br/>Making applications more intelligent.</td>
+<td align="center" width="25%">🏗️<br/><b>Architecture</b><br/>Designing maintainable systems.</td>
+<td align="center" width="25%">⚡<br/><b>Performance</b><br/>Making products faster and smoother.</td>
 </tr>
 </table>
 
 <!-- ========================================================= -->
-<!--                       FUN ZONE                             -->
+<!--                CONFIGURATION GUIDE                         -->
 <!-- ========================================================= -->
 
-## ⚡ Fun Zone
+## ⚙️ Configuration Guide
 
-<p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=1800&pause=700&color=22C55E&center=true&vCenter=true&width=650&lines=%3E+npm+run+dev;%3E+coding...;%3E+building+features...;%3E+debugging...;%3E+fixing+bugs...;%3E+deploying...;%3E+%E2%98%95+coffee...;%3E+repeat..."
-    alt="Developer Animation"
-  />
-</p>
+Repo này chạy được "tự động, tự host" nhờ 2 workflow. Bảng dưới là toàn bộ điểm có thể chỉnh — không cần biết code vẫn tùy biến được.
 
-<p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="420" alt="Coding Animation" />
-</p>
+| Muốn đổi gì | Sửa ở đâu | Cách làm |
+|---|---|---|
+| Username GitHub | `snake.yml`, `metrics.yml` | Đổi mọi chỗ `buihuudat` → username của bạn |
+| Tần suất cập nhật snake | `snake.yml` → `cron` | VD `"0 0 * * *"` = mỗi ngày lúc 00:00 UTC |
+| Tần suất cập nhật metrics | `metrics.yml` → `cron` | VD `"0 */6 * * *"` = mỗi 6 tiếng |
+| Theme màu metrics | Thêm `config_theme: dark` (hoặc `tokyonight`, `dracula`...) vào step tương ứng | Xem danh sách theme tại repo `lowlighter/metrics` |
+| Số ngôn ngữ hiển thị | `metrics.yml` → `plugin_languages_limit` | Số nguyên, mặc định `8` |
+| Ngưỡng huy hiệu Achievements | `metrics.yml` → `plugin_achievements_threshold` | `C` (dễ đạt) → `S` (khó nhất) |
+| Repo nổi bật ở card base | `metrics.yml` → `plugin_repositories_featured` | Liệt kê tên repo, phân tách bằng dấu phẩy |
+| Bật/tắt 1 card metrics | `metrics.yml` | Xoá hẳn step tương ứng (base/languages/achievements/isocalendar) |
+| Múi giờ tính hoạt động | Cả 2 workflow → `config_timezone` / `plugin_languages_analysis_timezone` | VD `Asia/Ho_Chi_Minh` |
+| Màu gradient hero/footer | README → `capsule-render.vercel.app` URL | Đổi tham số `color=0:...,50:...,100:...` (mã hex) |
+| Nội dung dòng chữ chạy (typing) | README → `readme-typing-svg.demolab.com` URL | Đổi tham số `lines=` (câu cách nhau bằng `;`, khoảng trắng là `+`) |
+| Badge liên hệ / mạng xã hội | README → mục "Connect With Me" | Đổi link `href`, đổi `logo=` theo tên icon tại simpleicons.org |
+
+**Secret bắt buộc:** `METRICS_TOKEN` — Personal Access Token (scope `repo`, `read:user`) tạo tại `github.com/settings/tokens`, thêm vào **Settings → Secrets and variables → Actions** của repo.
 
 <!-- ========================================================= -->
 <!--                       CONNECT                              -->
@@ -468,10 +372,6 @@ Making products faster and smoother.
   <a href="https://instagram.com/buihuudat_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
   <a href="https://www.youtube.com/channel/UCEt_3J34Gnx_HaWeMcCX9xw"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
 </p>
-
-<!-- ========================================================= -->
-<!--                       SUPPORT                              -->
-<!-- ========================================================= -->
 
 ## ☕ Support My Work
 
