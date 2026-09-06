@@ -1,0 +1,104 @@
+name: Generate Profile Metrics
+
+on:
+  schedule:
+    # Cứ 6 tiếng chạy lại 1 lần — chỉnh theo nhu cầu
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      # ─────────────────────────────────────────────
+      # CARD 1 — Header + Hoạt động + Repos nổi bật
+      # ─────────────────────────────────────────────
+      - name: "Metrics — Base card"
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: buihuudat
+          filename: metrics.base.svg
+          template: classic
+          base: "header, activity, community, repositories, metadata"
+          config_timezone: Asia/Ho_Chi_Minh
+          plugin_repositories: yes
+          plugin_repositories_forks: no
+          plugin_repositories_featured: STEMTOWN, 3GO
+          output_action: commit
+          committer_message: "chore(metrics): update base card [skip ci]"
+
+      # ─────────────────────────────────────────────
+      # CARD 2 — Ngôn ngữ sử dụng nhiều nhất
+      # ─────────────────────────────────────────────
+      - name: "Metrics — Languages card"
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: buihuudat
+          filename: metrics.languages.svg
+          base: ""
+          plugin_languages: yes
+          plugin_languages_analysis_timezone: Asia/Ho_Chi_Minh
+          plugin_languages_limit: 8
+          plugin_languages_threshold: "2%"
+          plugin_languages_details: percentage
+          plugin_languages_colors: github
+          output_action: commit
+          committer_message: "chore(metrics): update languages card [skip ci]"
+
+      # ─────────────────────────────────────────────
+      # CARD 3 — Thành tựu (thay cho Trophy cũ)
+      # ─────────────────────────────────────────────
+      - name: "Metrics — Achievements card"
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: buihuudat
+          filename: metrics.achievements.svg
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes
+          plugin_achievements_display: detailed
+          output_action: commit
+          committer_message: "chore(metrics): update achievements card [skip ci]"
+
+      # ─────────────────────────────────────────────
+      # CARD 4 — Lịch đóng góp dạng ISO calendar
+      # ─────────────────────────────────────────────
+      - name: "Metrics — Isocalendar card"
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: buihuudat
+          filename: metrics.isocalendar.svg
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          output_action: commit
+          committer_message: "chore(metrics): update isocalendar card [skip ci]"
+
+# ═════════════════════════════════════════════════════════════
+# GHI CHÚ CẤU HÌNH
+# ═════════════════════════════════════════════════════════════
+# 1) Bắt buộc tạo secret "METRICS_TOKEN":
+#    - Vào https://github.com/settings/tokens → Generate new token (classic)
+#    - Tick scope: repo, read:user
+#    - Copy token → Settings (của repo buihuudat/buihuudat) → Secrets and
+#      variables → Actions → New repository secret → tên: METRICS_TOKEN
+#    (Token mặc định GITHUB_TOKEN không đủ quyền đọc để plugin languages/
+#    achievements hoạt động đầy đủ trên toàn bộ repo của bạn.)
+#
+# 2) Muốn đổi theme màu: thêm dòng  config_theme: dark  (hoặc tokyonight,
+#    dracula, github-dark...) vào bất kỳ step nào ở trên.
+#
+# 3) Muốn thêm/bớt card: xoá hẳn 1 step, hoặc copy step có sẵn đổi
+#    "filename" + plugin tương ứng để tạo thêm card mới.
+#
+# 4) Tất cả output SVG được commit thẳng — không cần branch "output"
+#    riêng như snake.yml (khác cơ chế). File sẽ nằm ở gốc repo
+#    buihuudat/buihuudat, README sẽ trỏ thẳng tới đó.
