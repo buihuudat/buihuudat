@@ -187,22 +187,22 @@ const huuDat = {
 ## 📊 GitHub Metrics
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.base.svg" alt="Base metrics" width="100%" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.base.svg" alt="Base metrics" width="100%" />
 </p>
 
 <table>
 <tr>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.languages.svg" alt="Top languages" width="100%" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.languages.svg" alt="Top languages" width="100%" />
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.achievements.svg" alt="Achievements" width="100%" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.achievements.svg" alt="Achievements" width="100%" />
 </td>
 </tr>
 </table>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/main/metrics.isocalendar.svg" alt="Contribution calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.isocalendar.svg" alt="Contribution calendar" width="100%" />
 </p>
 
 <p align="center">
