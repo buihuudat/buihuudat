@@ -1,0 +1,9 @@
+{
+  "name": "buihuudat",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bui Huu Dat portfolio (static site)",
+  "engines": {
+    "node": "22.x"
+  }
+}
