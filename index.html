@@ -1,1189 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#0a0b1a">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07071a">
+  <title>Bui Huu Dat — Full-stack &amp; Mobile Developer</title>
+  <meta name="description" content="Bui Huu Dat (Bùi Hữu Đạt) — Frontend, Node.js and React Native developer in Ho Chi Minh City. Portfolio, projects and contact.">
+  <meta name="keywords" content="Bui Huu Dat, Bùi Hữu Đạt, React, React Native, Node.js, Frontend Developer, Portfolio">
+  <meta name="author" content="Bui Huu Dat">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buihuudat.vercel.app/">
+  <link rel="icon" href="./assets/img/title/icon-title.jpg">
 
-    <link rel="icon" href="./assets/img/title/icon-title.jpg">
-    <title>Bui Huu Dat</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bui Huu Dat — Full-stack &amp; Mobile Developer">
+  <meta property="og:description" content="Portfolio of Bui Huu Dat: web, mobile and design projects.">
+  <meta property="og:image" content="https://buihuudat.vercel.app/assets/img/about/avt.png">
+  <meta property="og:url" content="https://buihuudat.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bui Huu Dat — Full-stack &amp; Mobile Developer">
+  <meta name="twitter:image" content="https://buihuudat.vercel.app/assets/img/about/avt.png">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Bui Huu Dat","url":"https://buihuudat.vercel.app/","email":"mailto:buihuudat.dev@gmail.com","jobTitle":"Full-stack & Mobile Developer","address":{"@type":"PostalAddress","addressLocality":"Ho Chi Minh City","addressCountry":"VN"},"sameAs":["https://github.com/buihuudat","https://www.linkedin.com/in/b%C3%B9i-h%E1%BB%AFu-%C4%91%E1%BA%A1t-3a436819b/","https://www.facebook.com/1150694301"]}
+  </script>
 
-    <meta name="description" content="Giới thiệu về Bui Huu Dat">
-
-    <meta name="keywords" content="Bui Huu Dat, Bùi Hữu Đạt">
-    <meta name="author" content="Bui Huu Dat">
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://buihuudat.vercel.app">
-
-    <meta property="og:title" content="Bui Huu Dat">
-    <meta property="og:description" content="Bui Huu Dat">
-    <meta property="og:image" content="./assets/img/about/avt.png">
-    <meta property="og:url" content="https://buihuudat.vercel.app">
-
-    <meta name="twitter:title" content="Bui Huu Dat">
-    <meta name="twitter:description" content="Bui Huu Dat">
-    <meta name="twitter:image"
-      content="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-1/420290757_10231247883197633_7151754319385741083_n.jpg?stp=dst-jpg_p200x200&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=48xkIQ4JoigAb68oT5I&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfB0vdcrybmlJ5xsA_ezdVqrDMLRmNYcC2twR_igrvuDKw&oe=6617B98E">
-    <meta name="twitter:card" content="./assets/img/about/avt.png">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Viga&display=swap">
-    <!--==================== ICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-    <!--==================== TYPED ====================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <!--==================== BG ====================-->
-    
-    <!--==================== SOCIALS ====================-->
-    <link rel="stylesheet" href="./assets/css/social.css">
-    <!--==================== LOADER ====================-->
-    <link rel="stylesheet" href="./assets/css/loading.css">
-    <!--==================== THEME TOGGLE ====================-->
-    <link rel="stylesheet" href="./assets/css/button-theme.css">
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <!--==================== FX (3D / motion layer) ====================-->
-    <link rel="stylesheet" href="./assets/css/fx.css">
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <script>
+    /* apply saved theme before paint to avoid a flash */
+    try {
+      var t = localStorage.getItem('bhd-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
 
 <body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-  <!--==================== LOADER ====================-->
-  <span class="loader load">
-    <div class="cont">
+  <!-- boot screen -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__orbit"><i></i><i></i><i></i></div>
+    <div class="boot__name">BHD<span>.</span></div>
+    <div class="boot__bar"><b id="bootBar"></b></div>
+  </div>
 
-      <div class="h1Container">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cRing" aria-hidden="true"></div>
 
-        <div class="cube h1c w1 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w1 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w1 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w2 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w2 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w2 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w3 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w3 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h1c w3 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-      </div>
-
-      <div class="h2Container">
-
-        <div class="cube h2c w1 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w1 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w1 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w2 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w2 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w2 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w3 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w3 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h2c w3 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-      </div>
-
-      <div class="h3Container">
-
-        <div class="cube h3c w1 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w1 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w1 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w2 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w2 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w2 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w3 l1">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w3 l2">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-
-        <div class="cube h3c w3 l3">
-          <div class="face top"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-        </div>
-      </div>
-
+  <!-- top bar -->
+  <header class="topbar">
+    <a href="#home" class="logo" aria-label="Home">BHD<span>.</span></a>
+    <div class="topbar__right">
+      <button class="chip kbd-btn" id="openPalette" aria-label="Open command palette">
+        <i class="uil uil-search"></i><span data-i18n="search">Search</span><kbd>⌘K</kbd>
+      </button>
+      <button class="icon-btn" id="langBtn" aria-label="Switch language"><span id="langLabel">EN</span></button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+        <i class="uil uil-moon theme-moon"></i><i class="uil uil-sun theme-sun"></i>
+      </button>
     </div>
-  </span>
-
-
-  <!--==================== BG ====================-->
-  <canvas id="fx-bg" aria-hidden="true"></canvas>
-  <div class="fx-progress" aria-hidden="true"></div>
-  <div class="fx-cursor-dot" aria-hidden="true"></div>
-  <div class="fx-cursor-ring" aria-hidden="true"></div>
-
-  <!--==================== HEADER ====================-->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">Bui Huu Dat. </a>
-
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list grid">
-          <li class="nav__item">
-            <a href="#home" class="nav__link active-link">
-              <i class="uil uil-estate nav__icon"></i> Home
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">
-              <i class="uil uil-user nav__icon"></i> About
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#skills" class="nav__link">
-              <i class="uil uil-file-alt nav__icon"></i> Skills
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#project" class="nav__link">
-              <i class="uil uil-scenery nav__icon"></i> Project
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">
-              <i class="uil uil-scenery nav__icon"></i> Contact
-            </a>
-          </li>
-        </ul>
-        <i class="uil uil-times nav__close" id="nav-close"></i>
-      </div>
-
-      <div class="nav__btns">
-        <!-- Theme change button -->
-        <button id="theme-toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 472.39 472.39">
-            <g class="toggle-sun">
-              <path
-                d="M403.21,167V69.18H305.38L236.2,0,167,69.18H69.18V167L0,236.2l69.18,69.18v97.83H167l69.18,69.18,69.18-69.18h97.83V305.38l69.18-69.18Zm-167,198.17a129,129,0,1,1,129-129A129,129,0,0,1,236.2,365.19Z" />
-            </g>
-            <g class="toggle-circle">
-              <circle class="cls-1" cx="236.2" cy="236.2" r="103.78" />
-            </g>
-          </svg>
-        </button>
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="uil uil-apps"></i>
-        </div>
-      </div>
-    </nav>
   </header>
 
-  <!--==================== MAIN ====================-->
-  <main class="main">
-    <!--==================== HOME ====================-->
-    <section class="home section" id="home">
-      <div class="home__container container grid">
-        <div class="home__content grid">
-          <div class="home__social">
-            <a href="https://www.linkedin.com/in/b%C3%B9i-h%E1%BB%AFu-%C4%91%E1%BA%A1t-3a436819b/" target="_blank"
-              class="home__social-icon">
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-            <a href="https://www.pinterest.com/BuiHuuDatDeveloper/" target="_blank" class="home__social-icon">
-              <i class="fab fa-pinterest-p"></i>
-            </a>
-            <a href="https://www.facebook.com/1150694301" target="_blank" class="home__social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://github.com/buihuudat" target="_blank" class="home__social-icon">
-              <i class="uil uil-github-alt"></i>
-            </a>
-          </div>
-          <div class="home__img">
-            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <mask id="mask0" mask-type="alpha">
-                <path
-                  d="M49.6,-53.6C58.9,-40.4,57.2,-20.2,58.5,1.3C59.7,22.7,63.9,45.4,54.7,59.1C45.4,72.8,22.7,77.4,2.9,74.5C-17,71.7,-33.9,61.3,-47.4,47.6C-60.8,33.9,-70.8,17,-71.7,-0.9C-72.5,-18.8,-64.4,-37.5,-51,-50.7C-37.5,-63.9,-18.8,-71.6,0.7,-72.3C20.2,-73,40.4,-66.8,49.6,-53.6Z"
-                  transform="translate(100 100)" />
+  <!-- floating dock -->
+  <nav class="dock" id="dock" aria-label="Sections">
+    <span class="dock__glow" id="dockGlow"></span>
+    <a href="#home" class="dock__link is-active" data-sec="home"><i class="uil uil-estate"></i><span data-i18n="nav.home">Home</span></a>
+    <a href="#about" class="dock__link" data-sec="about"><i class="uil uil-user"></i><span data-i18n="nav.about">About</span></a>
+    <a href="#skills" class="dock__link" data-sec="skills"><i class="uil uil-layers"></i><span data-i18n="nav.skills">Skills</span></a>
+    <a href="#journey" class="dock__link" data-sec="journey"><i class="uil uil-briefcase-alt"></i><span data-i18n="nav.journey">Journey</span></a>
+    <a href="#projects" class="dock__link" data-sec="projects"><i class="uil uil-apps"></i><span data-i18n="nav.projects">Projects</span></a>
+    <a href="#contact" class="dock__link" data-sec="contact"><i class="uil uil-message"></i><span data-i18n="nav.contact">Contact</span></a>
+  </nav>
 
-              </mask>
-              <g mask="url(#mask0)">
-                <path
-                  d="M49.6,-53.6C58.9,-40.4,57.2,-20.2,58.5,1.3C59.7,22.7,63.9,45.4,54.7,59.1C45.4,72.8,22.7,77.4,2.9,74.5C-17,71.7,-33.9,61.3,-47.4,47.6C-60.8,33.9,-70.8,17,-71.7,-0.9C-72.5,-18.8,-64.4,-37.5,-51,-50.7C-37.5,-63.9,-18.8,-71.6,0.7,-72.3C20.2,-73,40.4,-66.8,49.6,-53.6Z"
-                  transform="translate(100 100)" />
-                <image class="home__blob-img" x='-10' y='-35' href="./assets/img/about/avt.png" />
-              </g>
-            </svg>
-
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow reveal"><span class="pulse"></span><span data-i18n="hero.status">Available for new opportunities</span></p>
+          <h1 class="hero__title reveal" style="--i:1">
+            <span data-i18n="hero.hi">Hi, I'm</span><br>
+            <span class="grad" id="heroName">Bui Huu Dat</span>
+          </h1>
+          <p class="hero__role reveal" style="--i:2"><span data-i18n="hero.and">And I'm a</span> <span class="typed" id="typed"></span><span class="caret"></span></p>
+          <p class="hero__desc reveal" style="--i:3" data-i18n="hero.desc">Persistence and perseverance are my strong points. I build fast, polished web and mobile products.</p>
+          <div class="hero__cta reveal" style="--i:4">
+            <a href="#projects" class="btn btn--primary magnetic"><span data-i18n="hero.work">View my work</span><i class="uil uil-arrow-right"></i></a>
+            <a href="#contact" class="btn btn--ghost magnetic"><span data-i18n="hero.contact">Contact me</span><i class="uil uil-message"></i></a>
           </div>
-          <div class="home__data">
-            <h1 class="home__title">Hi there <span class="wave">👋</span><br> I'm <span>Bui Huu Dat</span></h1>
-            <h2 class="home__subtitle">And I'm <span class="typing_home"></span></h2>
-            <p class="home__description">Persistence and perseverance are my strong points.</p>
-            <a href="#contact" class="button button--flex btns--hover--translateY home__button">
-              Contact Me
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <i class="uil uil-message button__icon btns-hover-icon"></i>
-            </a>
+          <div class="socials reveal" style="--i:5">
+            <a class="social magnetic" href="https://github.com/buihuudat" target="_blank" rel="noopener" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+            <a class="social magnetic" href="https://www.linkedin.com/in/b%C3%B9i-h%E1%BB%AFu-%C4%91%E1%BA%A1t-3a436819b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+            <a class="social magnetic" href="https://www.facebook.com/1150694301" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="social magnetic" href="https://www.pinterest.com/BuiHuuDatDeveloper/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
           </div>
         </div>
-
-        <!-- <div class="home__emoji">
-                  <img src="./assets/img/emoji/emoji2.png" class="l" alt="">
-                  <img src="./assets/img/emoji/emoji.png" class="l" alt="">
-                  <img src="./assets/img/emoji/fire.png" class="r" alt="">
-                </div> -->
-
-        <div class="home__scroll">
-          <a href="#about" class="home__scroll-button button--flex">
-            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-            <span class="home__scroll-name">Scroll down</span>
-            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-          </a>
+        <div class="hero__visual reveal" style="--i:2" data-parallax="0.12">
+          <div class="avatar tilt" data-tilt="14">
+            <span class="avatar__ring"></span><span class="avatar__ring avatar__ring--2"></span>
+            <img src="./assets/img/about/avt.png" alt="Bui Huu Dat" width="360" height="360" fetchpriority="high">
+          </div>
+          <div class="float-card float-card--a"><i class="uil uil-react"></i> React</div>
+          <div class="float-card float-card--b"><i class="uil uil-server-network"></i> Node.js</div>
+          <div class="float-card float-card--c"><i class="uil uil-mobile-android"></i> React Native</div>
         </div>
       </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><i class="uil uil-mouse-alt"></i><span data-i18n="hero.scroll">Scroll</span></a>
     </section>
 
-    <!--==================== ABOUT ====================-->
-    <section class="about section" id="about">
-      <h2 class="section__title">About Me</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="about__container container grid">
-        <div class="about__imgs">
-          <img src="./assets/img/about.jpg" alt="" title="Bui Huu Dat" class="about__img">
-        </div>
-        <div class="about__data">
-          <div class="about__title">I'm Bui Huu Dat <br> and I'm a <span class="typing_about"></span>
-          </div>
-          <p class="about__description">I'm <span id="old"></span> year old. I grew up in Dak Nong. Currently, I'm
-            studying
-            and
-            working in Ho Chi Minh city. <br>
-            My hobbies are watching movies, playing games and listening to music.
-            In addition, I also like to travel to many places.
-            I'm not a free person, in addition to studying at school and at home, i often go online to
-            find
-            more experiences for myself and impose knowledge.
-            I always try to do things the best way possible.
-          </p>
-
-          <div class="about__buttons">
-            <a download="" href="./assets/img/Facebook.mp4" class="button button--flex">
-              Download CV
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <i class="uil uil-download-alt button__icon"></i>
-            </a>
-          </div>
-        </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>PHP</span><span>UI/UX</span><span>Premiere</span><span>Photoshop</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>PHP</span><span>UI/UX</span><span>Premiere</span><span>Photoshop</span>
       </div>
-    </section>
+    </div>
 
-    <!--==================== SKILLS ====================-->
-    <section class="skills section" id="skills">
-      <h2 class="section__title">Skills</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="skills__container container grid">
-        <div>
-          <!-- SKILLS 1 -->
-          <div class="skills__content skills-content-1 skills__open">
-            <div class="skills__header">
-              <i class="uil uil-brackets-curly skills__icon"></i>
-
-              <div>
-                <h1 class="skills__title">Frontend</h1>
-                <span class="skills__subtitle">More than 1 years</span>
-              </div>
-
-              <i class="uil uil-angle-down skills__arrow"></i>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker" data-i18n="about.kicker">About</p><h2 class="split" data-i18n="about.title">Crafting things for the web &amp; mobile</h2></header>
+        <div class="about">
+          <figure class="about__photo reveal tilt" data-tilt="8">
+            <img src="./assets/img/about.jpg" alt="Bui Huu Dat" loading="lazy" width="400" height="480">
+          </figure>
+          <div class="about__body reveal" style="--i:1">
+            <p><span data-i18n="about.p1a">I'm</span> <b id="age">24</b> <span data-i18n="about.p1b">years old. I grew up in Dak Nong and now study and work in Ho Chi Minh City.</span></p>
+            <p data-i18n="about.p2">My hobbies are watching movies, playing games, listening to music and travelling. I'm never idle — besides school and work I keep learning online to gain experience and share knowledge.</p>
+            <p data-i18n="about.p3">I always try to do things the best way possible.</p>
+            <div class="stats">
+              <div class="stat glass"><b data-count="12" data-suffix="+">0</b><span data-i18n="stat.projects">Projects</span></div>
+              <div class="stat glass"><b data-count="5" data-suffix="+">0</b><span data-i18n="stat.design">Years in design</span></div>
+              <div class="stat glass"><b data-count="3">0</b><span data-i18n="stat.roles">Roles &amp; internships</span></div>
             </div>
-
-            <div class="skills__list grid">
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="uil uil-html5-alt skills__icon--title"></i>HTML
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__html"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="uil uil-css3-simple skills__icon--title"></i>CSS
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__css"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="uil uil-java-script skills__icon--title"></i>Javascript</h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__js"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="uil uil-react skills__icon--title"></i>React
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__react"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- SKILLS 2 -->
-          <div class="skills__content skills-content-2 skills__close">
-            <div class="skills__header">
-              <i class="uil uil-server-network skills__icon"></i>
-
-              <div>
-                <h1 class="skills__title">Backend</h1>
-                <span class="skills__subtitle">More than 1 years</span>
-              </div>
-
-              <i class="uil uil-angle-down skills__arrow"></i>
-            </div>
-
-            <div class="skills__list grid">
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="uil uil-database-alt skills__icon--title"></i>MYSQL</h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__mysql"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="fa-brands fa-node skills__icon--title"></i>NodeJS
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__java"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="fab fa-php skills__icon--title"></i>PHP</h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__php"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="fa-brands fa-node-js skills__icon--title"></i>Express
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__python"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <!-- SKILLS 3 -->
-          <div class="skills__content skills-content-3 skills__close   ">
-            <div class="skills__header">
-              <i class="uil uil-swatchbook skills__icon"></i>
-
-              <div>
-                <h1 class="skills__title">Designer</h1>
-                <span class="skills__subtitle">More than 5 years</span>
-              </div>
-
-              <i class="uil uil-angle-down skills__arrow"></i>
-            </div>
-
-            <div class="skills__list grid">
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="fas fa-paint-brush skills__icon--title"></i>UI-UX
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__uiux"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="fas fa-film skills__icon--title"></i>PREMIERE
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__premiere"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="far fa-images skills__icon--title"></i></i>PHOTOSHOP</h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__photoshop"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- SKILLS 4 -->
-          <div class="skills__content skills-content-4 skills__close   ">
-            <div class="skills__header">
-              <i class="uil uil-briefcase-alt skills__icon"></i>
-
-              <div>
-                <h1 class="skills__title">Office</h1>
-                <span class="skills__subtitle">More than 1 years</span>
-              </div>
-
-              <i class="uil uil-angle-down skills__arrow"></i>
-            </div>
-
-            <div class="skills__list grid">
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="far fa-file-word skills__icon--title"></i>WORD
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__word"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="far fa-file-excel skills__icon--title"></i>EXCEL
-                  </h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__excel"></span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name"><i class="far fa-file-powerpoint skills__icon--title"></i>POWER POINT</h3>
-                </div>
-                <div class="skills__bar">
-                  <span class="skills__percentage skills__powerPoint"></span>
-                </div>
-              </div>
+            <div class="about__cta">
+              <a class="btn btn--primary magnetic" href="./assets/img/Facebook.mp4" download><span data-i18n="about.cv">Download CV</span><i class="uil uil-download-alt"></i></a>
+              <button class="btn btn--ghost magnetic" data-copy="buihuudat.dev@gmail.com"><span data-i18n="about.copy">Copy email</span><i class="uil uil-copy"></i></button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!--==================== QUALIFICATION ====================-->
-    <section class="qualification section">
-      <h2 class="section__title">Qualification</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="qualification__container container">
-        <div class="qualification__tabs">
-          <div class="qualification__button ql-tt-1 button--flex qualification__active" data-target='#education'>
-            <i class="uil uil-graduation-cap qualification__icon"></i>
-            Education
-          </div>
-
-          <div class="qualification__button ql-tt-2 button--flex" data-target='#work'>
-            <i class="uil uil-briefcase-alt qualification__icon"></i>
-            Work
-          </div>
-        </div>
-
-        <div class="qualification__sections">
-          <!-- QUALIFICATION CONTENT 1 -->
-          <div class="qualification__content qualification__active" data-content id="education">
-            <!-- QUALIFICATION 1 -->
-            <div class="qualification__data">
-              <div>
-                <h3 class="qualification__title qt-1">Primary school</h3>
-                <span class="qualification__subtitle qst-1">Nguyen Dinh Chieu</span>
-                <div class="qualification__calendar qc-1">
-                  <i class="uil uil-calendar-alt"></i>
-                  2006 - 2011
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-            </div>
-            <!-- QUALIFICATION 2 -->
-            <div class="qualification__data">
-              <div></div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 class="qualification__title qt-2">Junior high school</h3>
-                <span class="qualification__subtitle qst-2">Phan Dinh Phung</span>
-                <div class="qualification__calendar qc-2">
-                  <i class="uil uil-calendar-alt"></i>
-                  2011 - 2015
-                </div>
-              </div>
-            </div>
-
-            <!-- QUALIFICATION 3 -->
-            <div class="qualification__data">
-              <div>
-                <h3 class="qualification__title qt-3">High School</h3>
-                <span class="qualification__subtitle qst-3">Phan Chu Trinh</span>
-                <div class="qualification__calendar qc-3">
-                  <i class="uil uil-calendar-alt"></i>
-                  2015 - 2018
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-            </div>
-
-            <!-- QUALIFICATION 4 -->
-            <div class="qualification__data">
-              <div></div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <!-- <span class="qualification__line"></span> -->
-              </div>
-
-              <div>
-                <h3 class="qualification__title qt-4">University</h3>
-                <span class="qualification__subtitle qst-4">Thuy Loi</span>
-                <div class="qualification__calendar qc-4">
-                  <i class="uil uil-calendar-alt"></i>
-                  2018 - 2022
-                </div>
-              </div>
-            </div>
-
-            <!-- EDUCATION -->
-            <div class="qualification__edu swiper-container qualification__active" data-content="">
-              <div class="swiper-wrapper">
-                <div class="qualification__card swiper-slide">
-                  <div class="qualification__box">
-                    <img src="./assets/img/School/primarySchool-min.jpg" alt="PrimarySchool">
-                    <div class="qualification__title--img">Nguyen Dinh Chieu<p>Primary School
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="qualification__card swiper-slide">
-                  <div class="qualification__box">
-                    <img src="./assets/img/School/secondarySchool-min.jpg" alt="SecondarySchool">
-                    <div class="qualification__title--img">Phan Dinh Phung<p>Junior high School
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="qualification__card swiper-slide">
-                  <div class="qualification__box">
-                    <img src="./assets/img/School/highSchool-min.jpg" alt="HighSchool">
-                    <div class="qualification__title--img">Phan Chu Trinh<p>High School</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="qualification__card swiper-slide">
-                  <div class="qualification__box">
-                    <img src="./assets/img/School/university-min.jpg" alt="">
-                    <div class="qualification__title--img">Thuy Loi<p>University</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- QUALIFICATION CONTENT 2 -->
-          <div class="qualification__content" data-content id="work">
-            <!-- QUALIFICATION 1 -->
-            <div class="qualification__data">
-              <div>
-                <h3 class="qualification__title">Passio Coffee</h3>
-                <span class="qualification__subtitle">Passio</span>
-                <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2020-2021
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-            </div>
-            <!-- QUALIFICATION 2 -->
-            <div class="qualification__data">
-              <div></div>
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 class="qualification__title">Frontend Intern at MULTIMEDIAVIET company</h3>
-                <span class="qualification__subtitle">MULTIMEDIAVIET</span>
-                <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  12/2022-3/2023
-                </div>
-              </div>
-            </div>
-            <!-- QUALIFICATION 3 -->
-            <div class="qualification__data">
-              <div>
-                <h3 class="qualification__title">Intern Mobile Developer</h3>
-                <span class="qualification__subtitle">MCI Solutions</span>
-                <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  11/2023-2/2024
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker" data-i18n="skills.kicker">Skills</p><h2 class="split" data-i18n="skills.title">Tools I work with</h2></header>
+        <div class="skills" id="skillsGrid"></div>
       </div>
     </section>
 
-    <!--==================== Project ====================-->
-    <section class="project section" id="project">
-      <h2 class="section__title">Project</h2>
-      <span class="section__subtitle"></span>
-
-
-      <div class="project__container container swiper-container">
-        <div class="swiper-wrapper">
-          <!-- PROJECT 1 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/qlsv.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Website Quan li SV</h3>
-              <p class="project__description">Website created from HTML + CSS + JS</p>
-              <a href="https://quanlisinhvien.vercel.app/" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 2 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/salseCar.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">BHDCar Website</h3>
-              <p class="project__description">Website cell cars for web technology exercises <br>Website created from
-                HTML + CSS + JS + PHP + MYsql</p>
-              <a href="https://buihuudat.github.io/myProject/BuiHuuDat/" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 3 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/admin.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Admin page</h3>
-              <p class="project__description">Website cell cars for web technology exercises <br>Website created from
-                HTML + CSS + JS + PHP + MYsql</p>
-              <a href="https://buihuudat.github.io/myProject/BuiHuuDat/admin.html" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 4 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/social.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Social Website BETA</h3>
-              <p class="project__description">Website created from ReacJS</p>
-              <a href="https://buihuudat-w-1.vercel.app/:slug/profile" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 5 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/reactW.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">React Portfolio Website</h3>
-              <p class="project__description">Website created from ReacJS</p>
-              <a href="https://buihuudat.github.io/about" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 6 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/spendingApp.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Spending Management Website</h3>
-              <p class="project__description">Website MERN</p>
-              <a href="https://spending-app.vercel.app/" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 7 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/pirus.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Pirus Website</h3>
-              <p class="project__description">React</p>
-              <a href="https://pirus-react-website.vercel.app/" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 8 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/food.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Food SF</h3>
-              <p class="project__description">React + Express</p>
-              <a href="https://food-buihuudat.vercel.app/" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 9 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/circlekk.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Circle K Website</h3>
-              <p class="project__description">React + Express</p>
-              <a href="https://circle-k-buihuudat.vercel.app" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 10 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/tl2nd.jpg" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">Thuy Loi 2nd</h3>
-              <p class="project__description">React Native + Express</p>
-              <a href="https://github.com/buihuudat/thuyLoi2ndClient" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 11 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/freshgreenApp.png" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">FreshGreen</h3>
-              <p class="project__description">React Native</p>
-              <a href="https://github.com/buihuudat/app_freshgreen" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <!-- PROJECT 12 -->
-          <div class="project__content grid swiper-slide">
-            <img src="./assets/img/project/freshgreenWeb.png" alt="" class="project__img">
-
-            <div class="project__data">
-              <h3 class="project__title">FreshGreen</h3>
-              <p class="project__description">React Native</p>
-              <a href="https://freshgreen.vercel.app" target="_blank"
-                class="button button--flex button--small project__button">
-                Demo
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
+    <!-- JOURNEY -->
+    <section class="section" id="journey">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker" data-i18n="journey.kicker">Journey</p><h2 class="split" data-i18n="journey.title">Experience &amp; education</h2></header>
+        <div class="tabs reveal" role="tablist">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="work"><i class="uil uil-briefcase-alt"></i><span data-i18n="journey.work">Work</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="edu"><i class="uil uil-graduation-cap"></i><span data-i18n="journey.edu">Education</span></button>
+          <span class="tabs__pill" id="tabPill"></span>
         </div>
+        <ol class="timeline" id="timeline"></ol>
       </div>
     </section>
 
-
-
-    <!--==================== CONTACT ME ====================-->
-    <section class="contact section" id="contact">
-      <h2 class="section__title">Contact Me</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="contact__container container">
-        <div class="contact__informations">
-          <div class="contact__information">
-            <i class="uil uil-phone contact__icon"></i>
-            <div>
-              <h3 class="contact__title">Call Me</h3>
-              <span class="contact__subtitle"></span>
-            </div>
-          </div>
-          <span class="vl"></span>
-          <div class="contact__information">
-            <i class="uil uil-envelope contact__icon"></i>
-            <div>
-              <h3 class="contact__title">Email</h3>
-              <span class="contact__subtitle">buihuudat.dev@gmail.com</span>
-            </div>
-          </div>
-          <span class="vl"></span>
-          <div class="contact__information">
-            <i class="uil uil-map-marker contact__icon"></i>
-            <div>
-              <h3 class="contact__title">Location</h3>
-              <span class="contact__subtitle">Nguyen Du ward 7 Go Vap HCM City </span>
-            </div>
-          </div>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker" data-i18n="projects.kicker">Projects</p><h2 class="split" data-i18n="projects.title">Selected work</h2></header>
+        <div class="toolbar reveal">
+          <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+          <label class="search"><i class="uil uil-search"></i><input id="projSearch" type="search" placeholder="Search projects…" data-i18n-ph="projects.search" autocomplete="off"></label>
         </div>
-        <form action="https://formspree.io/f/mzboojvy" method="post" class="contact__form grid">
-          <!-- <form action="mail.php" method="post" class="contact__form grid"> -->
-          <div class="contact__inputs grid">
-            <div class="contact__content">
-              <div class="underline"></div>
-              <label for="name" class="contact__label">Name</label>
-              <input type="text" name="name" class="contact__input" id="formName">
-            </div>
-            <div class="contact__content">
-              <label for="email" class="contact__label">Email</label>
-              <input type="email" name="email" class="contact__input" id="formEmail">
-            </div>
-          </div>
-          <div class="contact__content">
-            <label for="project" class="contact__label">Project</label>
-            <input type="text" name="project" class="contact__input" id="formProject">
-          </div>
-          <div class="contact__content">
-            <label for="message" class="contact__label">Message</label>
-            <textarea name="message" id="formMessage" cols="0" rows="7" class="contact__input"></textarea>
-          </div>
+        <div class="grid" id="projGrid"></div>
+        <p class="empty" id="projEmpty" hidden data-i18n="projects.empty">No projects match your search.</p>
+      </div>
+    </section>
 
-          <div class="contact__buttons">
-            <button type="submit" class="button button--flex btns--hover--translateY contact__button">
-              Send Message
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <i class="uil uil-message button__icon contact__button--icon btns-hover-icon"></i>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker" data-i18n="contact.kicker">Contact</p><h2 class="split" data-i18n="contact.title">Let's build something together</h2></header>
+        <div class="contact">
+          <div class="contact__info reveal">
+            <button class="info glass" data-copy="buihuudat.dev@gmail.com">
+              <i class="uil uil-envelope"></i>
+              <span><small data-i18n="contact.email">Email</small><b>buihuudat.dev@gmail.com</b></span>
+              <i class="uil uil-copy info__act"></i>
             </button>
+            <div class="info glass">
+              <i class="uil uil-map-marker"></i>
+              <span><small data-i18n="contact.loc">Location</small><b data-i18n="contact.locv">Go Vap, Ho Chi Minh City</b></span>
+            </div>
+            <a class="info glass" href="https://github.com/buihuudat" target="_blank" rel="noopener">
+              <i class="uil uil-github-alt"></i>
+              <span><small>GitHub</small><b>@buihuudat</b></span>
+              <i class="uil uil-arrow-up-right info__act"></i>
+            </a>
           </div>
-        </form>
+          <form class="form glass reveal" style="--i:1" id="form" action="https://formspree.io/f/mzboojvy" method="post" novalidate>
+            <div class="field"><input id="fName" name="name" required placeholder=" " autocomplete="name"><label for="fName" data-i18n="form.name">Name</label><em></em></div>
+            <div class="field"><input id="fEmail" name="email" type="email" required placeholder=" " autocomplete="email"><label for="fEmail" data-i18n="form.email">Email</label><em></em></div>
+            <div class="field"><input id="fProject" name="project" placeholder=" "><label for="fProject" data-i18n="form.project">Project</label><em></em></div>
+            <div class="field"><textarea id="fMsg" name="message" rows="5" required placeholder=" "></textarea><label for="fMsg" data-i18n="form.msg">Message</label><em></em></div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+            <button class="btn btn--primary magnetic" type="submit" id="send"><span data-i18n="form.send">Send message</span><i class="uil uil-message"></i></button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <!--==================== FOOTER ====================-->
   <footer class="footer">
-    <div class="footer">
-      <div class="footer__bg">
-        <div class="footer__container">
-          <h1 class="footer__title">BUI HUU DAT</h1>
-          <h2 class="footer__subtitle"><span class="typing_footer"></span></h2>
-          <div class="footer__social">
-            <div class="soc">
-              <li>
-                <a class="facebook" href="https://www.facebook.com/1150694301" target="_blank" title="Facebook">
-                  <div class="ir">
-                    <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="512" height="512">
-                      <path
-                        d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z">
-                      </path>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="instagram" href="https://www.instagram.com/hd_b2610/" target="_blank" title="Instagram">
-                  <div class="ir">
-                    <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="512" height="512">
-                      <path
-                        d="M256 109.3c47.8 0 53.4 0.2 72.3 1 17.4 0.8 26.9 3.7 33.2 6.2 8.4 3.2 14.3 7.1 20.6 13.4 6.3 6.3 10.1 12.2 13.4 20.6 2.5 6.3 5.4 15.8 6.2 33.2 0.9 18.9 1 24.5 1 72.3s-0.2 53.4-1 72.3c-0.8 17.4-3.7 26.9-6.2 33.2 -3.2 8.4-7.1 14.3-13.4 20.6 -6.3 6.3-12.2 10.1-20.6 13.4 -6.3 2.5-15.8 5.4-33.2 6.2 -18.9 0.9-24.5 1-72.3 1s-53.4-0.2-72.3-1c-17.4-0.8-26.9-3.7-33.2-6.2 -8.4-3.2-14.3-7.1-20.6-13.4 -6.3-6.3-10.1-12.2-13.4-20.6 -2.5-6.3-5.4-15.8-6.2-33.2 -0.9-18.9-1-24.5-1-72.3s0.2-53.4 1-72.3c0.8-17.4 3.7-26.9 6.2-33.2 3.2-8.4 7.1-14.3 13.4-20.6 6.3-6.3 12.2-10.1 20.6-13.4 6.3-2.5 15.8-5.4 33.2-6.2C202.6 109.5 208.2 109.3 256 109.3M256 77.1c-48.6 0-54.7 0.2-73.8 1.1 -19 0.9-32.1 3.9-43.4 8.3 -11.8 4.6-21.7 10.7-31.7 20.6 -9.9 9.9-16.1 19.9-20.6 31.7 -4.4 11.4-7.4 24.4-8.3 43.4 -0.9 19.1-1.1 25.2-1.1 73.8 0 48.6 0.2 54.7 1.1 73.8 0.9 19 3.9 32.1 8.3 43.4 4.6 11.8 10.7 21.7 20.6 31.7 9.9 9.9 19.9 16.1 31.7 20.6 11.4 4.4 24.4 7.4 43.4 8.3 19.1 0.9 25.2 1.1 73.8 1.1s54.7-0.2 73.8-1.1c19-0.9 32.1-3.9 43.4-8.3 11.8-4.6 21.7-10.7 31.7-20.6 9.9-9.9 16.1-19.9 20.6-31.7 4.4-11.4 7.4-24.4 8.3-43.4 0.9-19.1 1.1-25.2 1.1-73.8s-0.2-54.7-1.1-73.8c-0.9-19-3.9-32.1-8.3-43.4 -4.6-11.8-10.7-21.7-20.6-31.7 -9.9-9.9-19.9-16.1-31.7-20.6 -11.4-4.4-24.4-7.4-43.4-8.3C310.7 77.3 304.6 77.1 256 77.1L256 77.1z">
-                      </path>
-                      <path
-                        d="M256 164.1c-50.7 0-91.9 41.1-91.9 91.9s41.1 91.9 91.9 91.9 91.9-41.1 91.9-91.9S306.7 164.1 256 164.1zM256 315.6c-32.9 0-59.6-26.7-59.6-59.6s26.7-59.6 59.6-59.6 59.6 26.7 59.6 59.6S288.9 315.6 256 315.6z">
-                      </path>
-                      <circle cx="351.5" cy="160.5" r="21.5"></circle>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="twitter" href="https://twitter.com/dat54261001" target="_blank" title="Twitter">
-                  <div class="ir">
-                    <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="512" height="512">
-                      <path
-                        d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z">
-                      </path>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="youtube" href="https://www.youtube.com/channel/UCEt_3J34Gnx_HaWeMcCX9xw" target="_blank"
-                  title="YouTube">
-                  <div class="ir">
-                    <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="512" height="512">
-                      <path
-                        d="M422.6 193.6c-5.3-45.3-23.3-51.6-59-54 -50.8-3.5-164.3-3.5-215.1 0 -35.7 2.4-53.7 8.7-59 54 -4 33.6-4 91.1 0 124.8 5.3 45.3 23.3 51.6 59 54 50.9 3.5 164.3 3.5 215.1 0 35.7-2.4 53.7-8.7 59-54C426.6 284.8 426.6 227.3 422.6 193.6zM222.2 303.4v-94.6l90.7 47.3L222.2 303.4z">
-                      </path>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="paypal" href="./assets/404page.html" target="_blank" title="PayPal">
-                  <div class="ir">
-                    <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="512" height="512">
-                      <path
-                        d="M374.6 173.4c0 61.3-54 109.9-145.6 109.9h-26.7l-20.5 89.6h-64.3l62.8-283h106.6C343.5 89.8 374.6 125.5 374.6 173.4zM307.1 175.2c0-25.7-21.2-32.5-45.8-32.5h-28.4l-18.8 84.8h25.3C276.1 227.5 307.1 213 307.1 175.2zM393.1 161.4c12.2 95.9-78.6 145.2-173.4 143.8l-20.7 88.1h-44.6l-5 22.8h68.8l19.9-87.9C376.8 324 430.1 222.9 393.1 161.4z">
-                      </path>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-            </div>
-          </div>
-        </div>
-        <p class="footer__copy">&#169;2021 Bui Huu Dat. All right reserved.</p>
+    <div class="wrap footer__in">
+      <div class="logo">BHD<span>.</span></div>
+      <p>&copy; <span id="year">2025</span> Bui Huu Dat. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <div class="socials">
+        <a class="social" href="https://www.facebook.com/1150694301" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="social" href="https://www.instagram.com/hd_b2610/" target="_blank" rel="noopener" aria-label="Instagram"><i class="uil uil-instagram"></i></a>
+        <a class="social" href="https://twitter.com/dat54261001" target="_blank" rel="noopener" aria-label="X"><i class="uil uil-twitter"></i></a>
+        <a class="social" href="https://www.youtube.com/channel/UCEt_3J34Gnx_HaWeMcCX9xw" target="_blank" rel="noopener" aria-label="YouTube"><i class="uil uil-youtube"></i></a>
       </div>
     </div>
   </footer>
 
-  <!--==================== SCROLL TOP ====================-->
-  <a href="#home" class="scrollup" id="scroll-up">
-    <i class="uil uil-arrow-circle-up scrollup__icon"></i>
-  </a>
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="uil uil-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!--==================== SCROLL-REVEAL ====================-->
-  <script src="./assets/js/scrollreveal.min.js"></script>
-  <script src="./assets/js/scrollreveal.js"></script>
-  <!--==================== SWIPER JS ====================-->
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <!--==================== MAIN JS ====================-->
-  <script src="assets/js/main.js"></script>
-  <!--==================== FX: Lenis smooth scroll + Three.js ====================-->
+  <!-- project lightbox -->
+  <dialog class="modal" id="modal">
+    <button class="modal__close icon-btn" id="modalClose" aria-label="Close"><i class="uil uil-times"></i></button>
+    <img id="modalImg" alt="">
+    <div class="modal__body">
+      <div class="tags" id="modalTags"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <a class="btn btn--primary" id="modalLink" target="_blank" rel="noopener"><span data-i18n="projects.open">Open project</span><i class="uil uil-arrow-up-right"></i></a>
+    </div>
+  </dialog>
+
+  <!-- command palette -->
+  <dialog class="palette" id="palette" aria-label="Command palette">
+    <div class="palette__in">
+      <div class="palette__search"><i class="uil uil-search"></i><input id="palInput" placeholder="Type a command or search…" data-i18n-ph="pal.ph" autocomplete="off" aria-label="Command"><kbd>Esc</kbd></div>
+      <ul class="palette__list" id="palList" role="listbox"></ul>
+    </div>
+  </dialog>
+
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="assets/js/fx.js"></script>
-
+  <script src="./assets/js/galaxy.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
