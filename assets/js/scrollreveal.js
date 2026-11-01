@@ -1,4 +1,4 @@
-const sr = ScrollReveal({ distance: "60px", duration: 2800, reset: 0 });
+const sr = ScrollReveal({ distance: "48px", duration: 1100, easing: "cubic-bezier(.16, 1, .3, 1)", reset: 0, viewFactor: 0.15, cleanup: true });
 sr.reveal(".section__title", { origin: "top" });
 sr.reveal(".section__subtitle", { origin: "top", distance: "30px" });
 sr.reveal(".home__social a", { origin: "left", interval: 10, delay: 400 });

@@ -1,0 +1,153 @@
+/* FX layer: cosmic WebGL backdrop, glass dock, 3D tilt, cursor, touch feedback.
+   Loaded after styles.css. Uses independent transform props (translate/scale)
+   where possible so it never fights ScrollReveal's inline transforms. */
+
+@property --g { syntax: "<number>"; inherits: true; initial-value: 0; }
+
+html { -webkit-tap-highlight-color: transparent; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+body { overscroll-behavior-y: none; }
+
+/* ---------- backdrop ---------- */
+#fx-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    background: radial-gradient(120% 90% at 50% 100%, #1a1240 0%, #0a0b1a 55%, #04040c 100%);
+    will-change: opacity;
+}
+
+/* ---------- loader ---------- */
+.loader { transition: opacity .6s ease, visibility .6s; }
+.loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* ---------- progress ---------- */
+.fx-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: 2000;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, #5b6cff, #b36bff, #ff9a5c);
+    box-shadow: 0 0 12px rgba(150, 110, 255, .8);
+    pointer-events: none;
+}
+
+/* ---------- glass dock header ---------- */
+.header {
+    background-color: rgba(12, 13, 30, .55);
+    -webkit-backdrop-filter: blur(18px) saturate(1.6);
+    backdrop-filter: blur(18px) saturate(1.6);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+body:not(.dark-theme) .header { background-color: rgba(255, 255, 255, .6); }
+.header.scroll-header {
+    background-color: rgba(12, 13, 30, .72) !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, .25) !important;
+    padding: 0 0 env(safe-area-inset-bottom) !important;
+}
+body:not(.dark-theme) .header.scroll-header { background-color: rgba(255, 255, 255, .78) !important; }
+.nav__link { transition: color .3s, translate .35s cubic-bezier(.16, 1, .3, 1); }
+.nav__link:hover { translate: 0 -3px; }
+.nav__menu { -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+
+/* ---------- typography polish ---------- */
+.section__title, .home__title, .about__title {
+    font-family: 'Space Grotesk', var(--body-font);
+    letter-spacing: -.01em;
+}
+.home__title span:not(.wave) {
+    background: linear-gradient(100deg, #8fa0ff, #c78bff 45%, #ffb27a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: fxShine 6s linear infinite;
+}
+@keyframes fxShine { to { background-position: -200% 0; } }
+.home__description { color: rgba(255, 255, 255, .78); }
+
+/* ---------- hero depth ---------- */
+.home__blob { filter: drop-shadow(0 25px 40px rgba(110, 90, 255, .45)); }
+.home__img, .home__data { will-change: translate; }
+
+/* ---------- 3D tilt ---------- */
+.fx-tilt { transform-style: preserve-3d; will-change: transform; transition: transform .6s cubic-bezier(.16, 1, .3, 1), box-shadow .3s; }
+.fx-tilt.is-tilting { transition: transform .08s linear, box-shadow .3s; }
+.project__img, .about__img { box-shadow: 0 20px 50px rgba(0, 0, 0, .35); }
+
+/* ---------- spotlight glow ---------- */
+.skills__content, .contact__information, .qualification__card {
+    background-image: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(130, 140, 255, calc(var(--g) * .2)), transparent 65%);
+    transition: --g .4s ease, background-color .3s, box-shadow .3s;
+    border-radius: .75rem;
+}
+.skills__content { border: 1px solid rgba(255, 255, 255, .06); padding: .25rem .5rem; }
+.skills__content:hover, .skills__content.is-lit { --g: 1; }
+.contact__information.is-lit, .qualification__card.is-lit { --g: 1; }
+
+/* ---------- touch feedback ---------- */
+.button, .home__social-icon, .scrollup, .nav__link, .skills__header, .qualification__button {
+    touch-action: manipulation;
+}
+.button:active, .home__social-icon:active, .scrollup:active { scale: .94; }
+.button, .home__social-icon, .scrollup, #theme-toggle { transition: translate .4s cubic-bezier(.16, 1, .3, 1), scale .25s, background-color .3s, color .3s, box-shadow .3s, opacity .3s; }
+.fx-ripple {
+    position: fixed;
+    width: 20px; height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3000;
+    border: 2px solid rgba(160, 140, 255, .9);
+    background: radial-gradient(circle, rgba(160, 140, 255, .35), transparent 70%);
+    animation: fxRipple .7s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+@keyframes fxRipple { to { transform: scale(7); opacity: 0; } }
+
+/* ---------- custom cursor (fine pointers only) ---------- */
+.fx-cursor-dot, .fx-cursor-ring { display: none; }
+@media (hover: hover) and (pointer: fine) {
+    html.fx-cursor, html.fx-cursor a, html.fx-cursor button, html.fx-cursor .skills__header { cursor: none; }
+    html.fx-cursor input, html.fx-cursor textarea { cursor: text; }
+    html.fx-cursor .fx-cursor-dot, html.fx-cursor .fx-cursor-ring {
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 4000;
+        border-radius: 50%;
+        will-change: transform;
+    }
+    .fx-cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #fff; mix-blend-mode: difference; }
+    .fx-cursor-ring {
+        width: 38px; height: 38px; margin: -19px 0 0 -19px;
+        border: 1.5px solid rgba(180, 160, 255, .8);
+        transition: width .3s, height .3s, margin .3s, background-color .3s, opacity .3s;
+    }
+    .fx-cursor-ring.is-hover { width: 64px; height: 64px; margin: -32px 0 0 -32px; background: rgba(150, 120, 255, .15); }
+    .fx-cursor-ring.is-down { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+}
+
+/* ---------- responsive tuning ---------- */
+@media (max-width: 480px) {
+    .project__img { width: 100%; max-width: 265px; }
+    .fx-ripple { border-width: 1.5px; }
+}
+@supports (height: 100dvh) { .loader { height: 100dvh; } }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .home__title span:not(.wave) { animation: none; }
+    .fx-ripple { display: none; }
+    .fx-tilt { transition: none; }
+}

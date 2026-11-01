@@ -1,7 +1,4 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -111,14 +108,10 @@ body.dark-theme {
     padding: 0;
     margin: 0;
 
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: color .3s, background-color .3s, border-color .3s, box-shadow .3s, opacity .3s;
 }
 
 html {
-    scroll-behavior: smooth;
     /* overflow-x: hidden!important; */
 }
 
