@@ -226,7 +226,7 @@
   }
 
   /* ================= scroll engine ================= */
-  var state = { scroll: 0, progress: 0, px: 0, py: 0, tx: 0, ty: 0, vh: innerHeight };
+  var state = { scroll: 0, progress: 0, px: 0, py: 0, tx: 0, ty: 9, vh: innerHeight, go: false, warp: 0, force: 0, lastMove: 0 };
   var lenis = null;
   if (window.Lenis && !reduce) {
     lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
@@ -494,6 +494,7 @@
   addEventListener('pointermove', function (e) {
     cur.x = e.clientX; cur.y = e.clientY;
     state.tx = e.clientX / innerWidth * 2 - 1; state.ty = e.clientY / innerHeight * 2 - 1;
+    state.lastMove = performance.now();
   }, { passive: true });
 
   /* ================= galaxy + main loop ================= */
@@ -509,7 +510,13 @@
     if (lenis) lenis.raf(now);
     state.scroll = lenis ? lenis.scroll : (pageYOffset || 0);
     state.progress = clamp(state.scroll / Math.max(1, root.scrollHeight - innerHeight), 0, 1);
-    state.px = lerp(state.px, state.tx, 0.06); state.py = lerp(state.py, state.ty, 0.06);
+    var prevScroll = state._s || 0; state._s = state.scroll;
+    var vel = Math.abs(state.scroll - prevScroll) / Math.max(dt, 0.001);
+    state.warp = lerp(state.warp, clamp(vel / 3500, 0, 1), 0.1);
+    state.force = fine ? 1 : ((now - state.lastMove) < 700 ? 1 : 0);
+    var ty = Math.abs(state.ty) > 2 ? 0 : state.ty;
+    state.px = lerp(state.px, state.tx, 0.06); state.py = lerp(state.py, ty, 0.06);
+    root.style.setProperty('--px', state.px.toFixed(3)); root.style.setProperty('--py', state.py.toFixed(3)); root.style.setProperty('--sc', Math.min(state.scroll, 1200).toFixed(0));
     bar.style.transform = 'scaleX(' + state.progress.toFixed(4) + ')';
     toTop.classList.toggle('show', state.scroll > innerHeight * 0.8);
     topbar.classList.toggle('is-scrolled', state.scroll > 40);
@@ -545,6 +552,7 @@
   })();
   function finishBoot() {
     $('#boot').classList.add('is-done');
+    state.go = true;
     document.body.classList.remove('is-loading');
     revealObserve($$('.reveal:not(.in)'));
     setTimeout(function () { $('#boot').style.display = 'none'; }, 1000);

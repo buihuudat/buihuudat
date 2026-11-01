@@ -375,3 +375,26 @@ dialog::backdrop { background: rgba(3, 3, 12, .62); -webkit-backdrop-filter: blu
 .topbar::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .4s; background: linear-gradient(var(--bg) 35%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); -webkit-mask-image: linear-gradient(#000 60%, transparent); mask-image: linear-gradient(#000 60%, transparent); }
 .topbar.is-scrolled::before { opacity: 1; }
 :root[data-theme="light"] #bg { opacity: 0; }
+
+/* ---------- depth: ghost type behind the hero ---------- */
+.hero__ghost { position: absolute; inset: 0; z-index: -1; display: grid; align-content: center; justify-items: center; line-height: .82; pointer-events: none; overflow: hidden; user-select: none; }
+.hero__ghost span {
+  font: 700 clamp(6rem, 26vw, 24rem) var(--head); letter-spacing: -.04em; color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--text) 11%, transparent);
+  translate: calc(var(--px, 0) * -34px * var(--d)) calc(var(--py, 0) * -22px * var(--d) - var(--sc, 0) * .12px * var(--d));
+  opacity: calc(1 - var(--sc, 0) / 900);
+  will-change: translate;
+}
+.hero__ghost span:nth-child(2) { -webkit-text-stroke-color: color-mix(in srgb, var(--a2) 22%, transparent); }
+@media (max-width: 900px) { .hero__ghost { align-content: start; padding-top: 22vh; } .hero__ghost span { font-size: 30vw; } }
+
+/* ---------- scroll-driven 3D entrance (progressive enhancement) ---------- */
+@supports (animation-timeline: view()) {
+  @keyframes flipIn { from { opacity: 0; rotate: x 24deg; scale: .9; translate: 0 60px; filter: blur(6px); } to { opacity: 1; rotate: x 0deg; scale: 1; translate: 0 0; filter: blur(0); } }
+  .skills .card, .tl, .stat, .info, .form {
+    transform-origin: 50% 100%;
+    animation: flipIn linear both; animation-timeline: view(); animation-range: entry 0% entry 70%;
+  }
+  .skills { perspective: 1000px; }
+  .timeline, .about__body, .contact__info { perspective: 1000px; }
+}

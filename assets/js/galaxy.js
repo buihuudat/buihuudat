@@ -25,7 +25,8 @@
 
     var vert = [
       'attribute float aW; attribute float aRand; attribute vec3 aColor;',
-      'uniform float uTime, uPixel, uSize, uSpin, uMorph;',
+      'uniform float uTime, uPixel, uSize, uSpin, uMorph, uForce, uAspect;',
+      'uniform vec2 uPointer;',
       'varying vec3 vColor; varying float vA;',
       'void main(){',
       '  vec3 p = position;',
@@ -39,8 +40,17 @@
       '  p *= 4.0 / (4.0 - clamp(w4, -2.5, 2.5) * 0.55);',
       '  p.y += sin(uTime*0.6 + aRand*20.0 + r*2.0) * 0.035;',
       '  vec4 mv = modelViewMatrix * vec4(p, 1.0);',
-      '  gl_Position = projectionMatrix * mv;',
-      '  gl_PointSize = uSize * uPixel * (0.45 + aRand) * (1.0 / -mv.z);',
+      '  vec4 clip = projectionMatrix * mv;',
+      '  vec2 ndc = clip.xy / clip.w;',
+      '  vec2 d = ndc - uPointer; d.x *= uAspect;',
+      '  float len = length(d);',
+      '  float f = uForce * exp(-len * len * 16.0);',                       /* gaussian force field around the pointer */
+      '  vec2 dir = d / (len + 0.0001);',
+      '  vec2 off = dir * f * 0.17 + vec2(-dir.y, dir.x) * f * 0.09;',      /* push away + swirl */
+      '  off.x /= uAspect;',
+      '  clip.xy = (ndc + off) * clip.w;',
+      '  gl_Position = clip;',
+      '  gl_PointSize = uSize * uPixel * (0.45 + aRand) * (1.0 / -mv.z) * (1.0 + f * 1.6);',
       '  vColor = aColor;',
       '  vA = 0.55 + 0.45 * sin(uTime*1.6 + aRand*60.0);',
       '}'
@@ -70,7 +80,7 @@
       g.setAttribute('aColor', new THREE.BufferAttribute(col, 3));
       g.setAttribute('aW', new THREE.BufferAttribute(w, 1));
       g.setAttribute('aRand', new THREE.BufferAttribute(rnd, 1));
-      var u = { uTime: { value: 0 }, uPixel: { value: dpr * 10 }, uSize: { value: cfg.size }, uSpin: { value: cfg.spin }, uMorph: { value: 0 } };
+      var u = { uTime: { value: 0 }, uPixel: { value: dpr * 10 }, uSize: { value: cfg.size }, uSpin: { value: cfg.spin }, uMorph: { value: 0 }, uForce: { value: 0 }, uAspect: { value: window.innerWidth / window.innerHeight }, uPointer: { value: new THREE.Vector2(9, 9) } };
       var m = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: u, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending });
       var pts = new THREE.Points(g, m);
       pts.frustumCulled = false;
@@ -102,7 +112,7 @@
       var v = 0.5 + Math.random() * 0.5; o.r = v * 0.8; o.g = v * 0.85; o.b = v;
     }, { size: 3.2, spin: 0.01 });
 
-    var cam = { z: 6.5, y: 1.6, ry: 0, rx: 0.35 };
+    var cam = { z: 22, y: 7, ry: -1.2, rx: 0.9 }, fov = 60;
     var slow = 0, frames = 0, lastW = window.innerWidth, lastH = window.innerHeight;
 
     window.addEventListener('resize', function () {
@@ -112,6 +122,7 @@
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
+      galaxy.u.uAspect.value = stars.u.uAspect.value = w / h;
     }, { passive: true });
 
     return {
@@ -121,10 +132,20 @@
         var morph = Math.sin(tt * 0.18) * 0.35 + s.progress * 1.8;
         galaxy.u.uMorph.value = morph; stars.u.uMorph.value = morph * 0.3;
 
-        cam.z = lerp(cam.z, 6.5 - s.progress * 3.2, 0.06);
-        cam.y = lerp(cam.y, 1.6 - s.progress * 1.2, 0.06);
-        cam.ry = lerp(cam.ry, s.progress * Math.PI * 1.2 + s.px * 0.35, 0.05);
-        cam.rx = lerp(cam.rx, 0.35 + s.progress * 0.5 + s.py * 0.2, 0.05);
+        /* intro fly-in until the boot screen is gone, then scroll-driven path */
+        var k = s.go ? 0.045 : 0.0;
+        cam.z = lerp(cam.z, s.go ? 6.5 - s.progress * 3.2 : 22, k || 0.01);
+        cam.y = lerp(cam.y, s.go ? 1.6 - s.progress * 1.2 : 7, k || 0.01);
+        cam.ry = lerp(cam.ry, s.progress * Math.PI * 1.2 + s.px * 0.35, s.go ? 0.04 : 0.01);
+        cam.rx = lerp(cam.rx, 0.35 + s.progress * 0.5 + s.py * 0.2, s.go ? 0.04 : 0.01);
+        /* warp: scroll speed widens the FOV */
+        var wf = 60 + s.warp * 32;
+        if (Math.abs(wf - fov) > 0.05) { fov = lerp(fov, wf, 0.12); camera.fov = fov; camera.updateProjectionMatrix(); }
+        var pu = galaxy.u.uPointer.value;
+        pu.x = s.tx; pu.y = -s.ty;
+        stars.u.uPointer.value.copy(pu);
+        galaxy.u.uForce.value = lerp(galaxy.u.uForce.value, s.force, 0.12);
+        stars.u.uForce.value = galaxy.u.uForce.value * 0.5;
         camera.position.set(0, cam.y, cam.z);
         camera.lookAt(0, 0, 0);
         galaxy.pts.rotation.set(cam.rx, cam.ry, 0);
