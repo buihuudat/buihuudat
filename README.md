@@ -367,10 +367,10 @@ Repo này chạy được "tự động, tự host" nhờ 2 workflow. Bảng dư
 | Tần suất cập nhật snake | `snake.yml` → `cron` | VD `"0 0 * * *"` = mỗi ngày lúc 00:00 UTC |
 | Tần suất cập nhật metrics | `metrics.yml` → `cron` | VD `"0 */6 * * *"` = mỗi 6 tiếng |
 | Theme màu metrics | Thêm `config_theme: dark` (hoặc `tokyonight`, `dracula`...) vào step tương ứng | Xem danh sách theme tại repo `lowlighter/metrics` |
-| Số ngôn ngữ hiển thị | `metrics.yml` → `plugin_languages_limit` | Số nguyên, mặc định `8` |
+| Số ngôn ngữ hiển thị | `scripts/languages-3d.py` → `[:7]` | Đổi số 7 rồi chạy lại workflow `live-status.yml` |
 | Repo nổi bật ở card base | `metrics.yml` → `plugin_repositories_featured` | Liệt kê tên repo, phân tách bằng dấu phẩy |
 | Bật/tắt 1 card metrics | `metrics.yml` | Xoá hẳn step tương ứng (base/isocalendar/stars) |
-| Múi giờ tính hoạt động | Cả 2 workflow → `config_timezone` / `plugin_languages_analysis_timezone` | VD `Asia/Ho_Chi_Minh` |
+| Múi giờ tính hoạt động | `metrics.yml`, `snake.yml` → `config_timezone` | VD `Asia/Ho_Chi_Minh` |
 | Banner 3D hero/stack/footer | `assets/readme/*.svg` (sinh từ `scripts/gen-readme-3d.py`) | Sửa màu/chữ trong script rồi chạy `python3 scripts/gen-readme-3d.py assets/readme` |
 | Nội dung dòng chữ chạy (typing) | README → `readme-typing-svg.demolab.com` URL | Đổi tham số `lines=` (câu cách nhau bằng `;`, khoảng trắng là `+`) |
 | Badge liên hệ / mạng xã hội | README → mục "Connect With Me" | Đổi link `href`, đổi `logo=` theo tên icon tại simpleicons.org |
