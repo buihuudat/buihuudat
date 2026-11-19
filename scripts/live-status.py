@@ -8,12 +8,13 @@ and if nothing could be refreshed the SVG is left untouched.
 usage: python3 scripts/live-status.py [out_dir=assets/readme] [github_user=buihuudat]
 """
 import html, importlib.util, json, os, sys, urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '..', 'assets', 'readme')
-USER = sys.argv[2] if len(sys.argv) > 2 else 'buihuudat'
+OUT = os.path.join(HERE, '..', 'assets', 'readme')
+USER = os.environ.get('LIVE_USER', 'buihuudat')
 LAT, LON, CITY = 10.8231, 106.6297, 'HO CHI MINH CITY'
 TZ = ZoneInfo('Asia/Ho_Chi_Minh')
 
@@ -27,53 +28,87 @@ FALLBACK_QUOTES = [
 ]
 
 
-def get(url, headers=None, timeout=15):
+def get(url, headers=None, timeout=4):
     req = urllib.request.Request(url, headers={'User-Agent': 'buihuudat-live-status', **(headers or {})})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode())
 
 
-def fetch_all():
-    data = {}
-    try:
-        w = get(f'https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}'
-                '&current=temperature_2m,weather_code,is_day,wind_speed_10m&timezone=Asia%2FHo_Chi_Minh')['current']
-        data['weather'] = {'temp': round(w['temperature_2m']), 'code': w['weather_code'],
-                           'day': bool(w['is_day']), 'wind': round(w['wind_speed_10m'])}
-    except Exception as e:
-        print('weather failed:', e)
+def _weather():
+    w = get(f'https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}'
+            '&current=temperature_2m,weather_code,is_day,wind_speed_10m&timezone=Asia%2FHo_Chi_Minh')['current']
+    return {'temp': round(w['temperature_2m']), 'code': w['weather_code'], 'day': bool(w['is_day']), 'wind': round(w['wind_speed_10m'])}
 
-    gh_headers = {'Accept': 'application/vnd.github+json'}
+
+def _github():
+    h = {'Accept': 'application/vnd.github+json'}
     if os.environ.get('GITHUB_TOKEN'):
-        gh_headers['Authorization'] = 'Bearer ' + os.environ['GITHUB_TOKEN']
-    try:
-        u = get(f'https://api.github.com/users/{USER}', gh_headers)
-        repos = get(f'https://api.github.com/users/{USER}/repos?per_page=100&sort=pushed', gh_headers)
-        own = [r for r in repos if not r['fork']]
-        last = max(repos, key=lambda r: r['pushed_at'])
-        data['github'] = {'stars': sum(r['stargazers_count'] for r in own), 'repos': u['public_repos'],
-                          'followers': u['followers'], 'last_repo': last['name'],
-                          'last_push': last['pushed_at'], 'last_lang': last.get('language') or ''}
-    except Exception as e:
-        print('github failed:', e)
+        h['Authorization'] = 'Bearer ' + os.environ['GITHUB_TOKEN']
+    u = get(f'https://api.github.com/users/{USER}', h)
+    repos = get(f'https://api.github.com/users/{USER}/repos?per_page=100&sort=pushed', h)
+    own = [r for r in repos if not r['fork']]
+    last = max(repos, key=lambda r: r['pushed_at'])
+    return {'stars': sum(r['stargazers_count'] for r in own), 'repos': u['public_repos'], 'followers': u['followers'],
+            'last_repo': last['name'], 'last_push': last['pushed_at'], 'last_lang': last.get('language') or ''}
 
-    try:
-        ids = get('https://hacker-news.firebaseio.com/v0/topstories.json')[:5]
-        for i in ids:
-            it = get(f'https://hacker-news.firebaseio.com/v0/item/{i}.json')
-            if it and it.get('title'):
-                data['hn'] = {'title': it['title'], 'score': it.get('score', 0), 'comments': it.get('descendants', 0)}
-                break
-    except Exception as e:
-        print('hn failed:', e)
 
-    try:
-        q = get('https://zenquotes.io/api/today')[0]
-        if q.get('q') and 'Too many requests' not in q['q']:
-            data['quote'] = {'text': q['q'], 'author': q['a']}
-    except Exception as e:
-        print('quote failed:', e)
-    return data
+def _hn():
+    for i in get('https://hacker-news.firebaseio.com/v0/topstories.json')[:5]:
+        it = get(f'https://hacker-news.firebaseio.com/v0/item/{i}.json')
+        if it and it.get('title'):
+            return {'title': it['title'], 'score': it.get('score', 0), 'comments': it.get('descendants', 0)}
+
+
+def _quote():
+    q = get('https://zenquotes.io/api/today')[0]
+    if q.get('q') and 'Too many requests' not in q['q']:
+        return {'text': q['q'], 'author': q['a']}
+
+
+def fetch_all(skip=()):
+    """All sources in parallel; a failing or skipped source is simply omitted."""
+    jobs = {k: v for k, v in {'weather': _weather, 'github': _github, 'hn': _hn, 'quote': _quote}.items() if k not in skip}
+
+    def run(item):
+        k, fn = item
+        try:
+            return k, fn()
+        except Exception as e:
+            print(k, 'failed:', e)
+            return k, None
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        return {k: v for k, v in ex.map(run, jobs.items()) if v}
+
+
+def clock(now, x_right, y, F):
+    """Ticking HH:MM:SS driven purely by SMIL: every digit is a stack of discrete-opacity <text>s whose
+    timeline is offset by the current time, so it keeps running in an <img> with no JS."""
+    frac = now.microsecond / 1e6
+    s, m, h = now.second, now.minute, now.hour
+    out = []
+
+    def cycle(items, period, elapsed, x, anchor='start', tl=None):
+        n = len(items)
+        for k, txt in enumerate(items):
+            if n == 1: kt, vals = '0', '1'
+            elif k == 0: kt, vals = f'0;{1/n:.6f}', '1;0'
+            elif k == n - 1: kt, vals = f'0;{k/n:.6f}', '0;1'
+            else: kt, vals = f'0;{k/n:.6f};{(k+1)/n:.6f}', '0;1;0'
+            extra = f' textLength="{tl}" lengthAdjust="spacingAndGlyphs"' if tl else ''
+            out.append(f'<text x="{x}" y="{y}" text-anchor="{anchor}" font-family="ui-monospace,Menlo,Consolas,monospace" font-weight="700" '
+                       f'font-size="17" fill="#e6efff" opacity="0"{extra}>{txt}'
+                       f'<animate attributeName="opacity" calcMode="discrete" values="{vals}" keyTimes="{kt}" dur="{period}s" '
+                       f'begin="{-elapsed:.3f}s" repeatCount="indefinite"/></text>')
+    x0 = x_right - 120
+    cycle([f'{i:02d}' for i in range(24)], 86400, h * 3600 + m * 60 + s + frac, x0, tl=22)
+    out.append(f'<text x="{x0+22}" y="{y}" font-family="ui-monospace,Menlo,monospace" font-weight="700" font-size="17" fill="#7db3ff">:</text>')
+    cycle([str(i) for i in range(6)], 3600, m * 60 + s + frac, x0 + 30)
+    cycle([str(i) for i in range(10)], 600, (m % 10) * 60 + s + frac, x0 + 41)
+    out.append(f'<text x="{x0+52}" y="{y}" font-family="ui-monospace,Menlo,monospace" font-weight="700" font-size="17" fill="#7db3ff">:</text>')
+    cycle([str(i) for i in range(6)], 60, s + frac, x0 + 60)
+    cycle([str(i) for i in range(10)], 10, s % 10 + frac, x0 + 71)
+    out.append(f'<text x="{x_right}" y="{y}" text-anchor="end" font-family="{F}" font-weight="700" font-size="13" letter-spacing="2" fill="#7db3ff">ICT</text>')
+    return '\n'.join(out)
 
 
 def ago(iso):
@@ -129,20 +164,24 @@ def icon(code, day):
     return f'<g>{cloud}{rain}</g>'
 
 
-def render(d):
+def render(d, now=None, live=False):
     W, H, hy = 1200, 420, 322
     defs = [g.common_defs(W, H, hy)]
     defs.append('<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity=".03"/></linearGradient>')
     defs.append('<linearGradient id="rim" x1="0" x2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#a5c8ff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>')
     F = g.FONT
-    now = datetime.now(TZ)
+    now = now or datetime.now(TZ)
     b = [g.stars(W, hy, 60, seed=21), '<ellipse cx="600" cy="230" rx="580" ry="170" fill="url(#aura)" opacity=".8"/>',
          g.floor(W, H, hy, 600, n=7, spread=170)]
 
     b.append(f'<circle cx="52" cy="40" r="5" fill="#3ddc97"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>')
     b.append(f'<text x="68" y="45" font-family="{F}" font-weight="800" font-size="15" letter-spacing="5" fill="#cfe2ff">LIVE STATUS</text>')
-    stamp = f'UPDATED {now:%H:%M} ICT · {now:%d %b %Y}'.upper()
-    b.append(f'<text x="1160" y="45" text-anchor="end" font-family="{F}" font-weight="600" font-size="13" letter-spacing="2" fill="#7db3ff">{stamp}</text>')
+    if live:
+        b.append(f'<text x="1038" y="45" text-anchor="end" font-family="{F}" font-weight="600" font-size="13" letter-spacing="2" fill="#7db3ff">{esc((f"{now:%d %b %Y}").upper())} ·</text>')
+        b.append(clock(now, 1160, 45, F))
+    else:
+        stamp = f'UPDATED {now:%H:%M} ICT · {now:%d %b %Y}'.upper()
+        b.append(f'<text x="1160" y="45" text-anchor="end" font-family="{F}" font-weight="600" font-size="13" letter-spacing="2" fill="#7db3ff">{stamp}</text>')
 
     cw, ch, cy0, gap = 265, 172, 70, 20
     xs = [40 + i * (cw + gap) for i in range(4)]
@@ -208,6 +247,9 @@ def render(d):
 
 
 def main():
+    global OUT, USER
+    if len(sys.argv) > 1: OUT = sys.argv[1]
+    if len(sys.argv) > 2: USER = sys.argv[2]
     os.makedirs(OUT, exist_ok=True)
     cache_path = os.path.join(OUT, 'live-data.json')
     try: cache = json.load(open(cache_path))

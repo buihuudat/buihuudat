@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/live.py": {
+      "includeFiles": "{scripts/live-status.py,scripts/gen-readme-3d.py,assets/readme/live-data.json}",
+      "maxDuration": 15
+    }
+  }
+}
