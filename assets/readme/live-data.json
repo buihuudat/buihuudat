@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 28,
-    "code": 0,
+    "temp": 25,
+    "code": 2,
     "day": false,
-    "wind": 3
+    "wind": 7
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-19T15:00:43Z",
+    "last_push": "2026-11-19T19:59:11Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "How the European Commission rolled out Matrix to more than 40k staff",
-    "score": 368,
-    "comments": 170
+    "title": "Anthropic hits $2T in Nasdaq debut",
+    "score": 744,
+    "comments": 1359
   },
   "quote": {
     "text": "You are never too old to become younger.",
