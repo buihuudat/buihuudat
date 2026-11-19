@@ -207,7 +207,7 @@ const huuDat = {
 <table>
 <tr>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.languages.svg" alt="Top languages" width="100%" />
+  <img src="./assets/readme/languages-3d.svg" alt="Top languages" width="100%" />
 </td>
 <td width="50%">
   <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.stars.svg" alt="Recently starred repositories and topics" width="100%" />
@@ -369,7 +369,7 @@ Repo này chạy được "tự động, tự host" nhờ 2 workflow. Bảng dư
 | Theme màu metrics | Thêm `config_theme: dark` (hoặc `tokyonight`, `dracula`...) vào step tương ứng | Xem danh sách theme tại repo `lowlighter/metrics` |
 | Số ngôn ngữ hiển thị | `metrics.yml` → `plugin_languages_limit` | Số nguyên, mặc định `8` |
 | Repo nổi bật ở card base | `metrics.yml` → `plugin_repositories_featured` | Liệt kê tên repo, phân tách bằng dấu phẩy |
-| Bật/tắt 1 card metrics | `metrics.yml` | Xoá hẳn step tương ứng (base/languages/isocalendar/stars) |
+| Bật/tắt 1 card metrics | `metrics.yml` | Xoá hẳn step tương ứng (base/isocalendar/stars) |
 | Múi giờ tính hoạt động | Cả 2 workflow → `config_timezone` / `plugin_languages_analysis_timezone` | VD `Asia/Ho_Chi_Minh` |
 | Banner 3D hero/stack/footer | `assets/readme/*.svg` (sinh từ `scripts/gen-readme-3d.py`) | Sửa màu/chữ trong script rồi chạy `python3 scripts/gen-readme-3d.py assets/readme` |
 | Nội dung dòng chữ chạy (typing) | README → `readme-typing-svg.demolab.com` URL | Đổi tham số `lines=` (câu cách nhau bằng `;`, khoảng trắng là `+`) |
