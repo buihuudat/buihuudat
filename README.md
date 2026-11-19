@@ -36,6 +36,7 @@
   <a href="#-about-me">About</a> •
   <a href="#-what-i-do">Skills</a> •
   <a href="#%EF%B8%8F-tech-stack">Tech Stack</a> •
+  <a href="#-live-status">Live</a> •
   <a href="#-github-metrics">Metrics</a> •
   <a href="#-featured-projects">Projects</a> •
   <a href="#%EF%B8%8F-configuration-guide">Config</a> •
@@ -180,6 +181,18 @@ const huuDat = {
 ```
 
 </details>
+
+<!-- ========================================================= -->
+<!--                    LIVE STATUS                             -->
+<!-- ========================================================= -->
+
+## 📡 Live Status
+
+<p align="center">
+  <img src="./assets/readme/live-3d.svg" alt="Live status: weather in Ho Chi Minh City, GitHub stats, latest push, Hacker News and daily quote" width="100%" />
+</p>
+
+<sub>Dữ liệu thật từ Open-Meteo · GitHub API · Hacker News · ZenQuotes — Action `live-status.yml` tự làm mới mỗi 3 tiếng và commit SVG vào repo.</sub>
 
 <!-- ========================================================= -->
 <!--                   GITHUB METRICS                          -->

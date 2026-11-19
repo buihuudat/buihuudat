@@ -1,5 +1,4 @@
 import random, math, sys
-OUT = sys.argv[1]
 FONT = "'Segoe UI','SF Pro Display','Helvetica Neue',Arial,sans-serif"
 
 def hx(c): c=c.lstrip('#'); return [int(c[i:i+2],16) for i in (0,2,4)]
@@ -158,6 +157,8 @@ def footer():
     b.append(f'<text x="600" y="38" text-anchor="middle" font-family="{FONT}" font-weight="700" font-size="14" letter-spacing="5" fill="#93c5fd" textLength="380" lengthAdjust="spacing">BUILD · LEARN · IMPROVE · REPEAT</text>')
     return wrap(W,H,''.join(d),'\n'.join(b),'Build, learn, improve, repeat')
 
-for name,fn in [('hero-3d.svg',hero),('stack-3d.svg',stack),('footer-3d.svg',footer)]:
-    open(f'{OUT}/{name}','w').write(fn())
-print('ok')
+if __name__ == '__main__':
+    OUT = sys.argv[1]
+    for name,fn in [('hero-3d.svg',hero),('stack-3d.svg',stack),('footer-3d.svg',footer)]:
+        open(f'{OUT}/{name}','w').write(fn())
+    print('ok')
