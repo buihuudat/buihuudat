@@ -210,7 +210,7 @@ const huuDat = {
   <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.languages.svg" alt="Top languages" width="100%" />
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.achievements.svg" alt="Achievements" width="100%" />
+  <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.stars.svg" alt="Recently starred repositories and topics" width="100%" />
 </td>
 </tr>
 </table>
@@ -221,10 +221,6 @@ const huuDat = {
 
 <p align="center">
   <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D contribution skyline" width="100%" />
-</p>
-
-<p align="center">
-  <img src="./metrics.stars.svg" alt="Recently starred repositories and topics" width="60%" />
 </p>
 
 <p align="center">
