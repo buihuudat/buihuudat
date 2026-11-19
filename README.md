@@ -189,10 +189,10 @@ const huuDat = {
 ## 📡 Live Status
 
 <p align="center">
-  <img src="./assets/readme/live-3d.svg" alt="Live status: weather in Ho Chi Minh City, GitHub stats, latest push, Hacker News and daily quote" width="100%" />
+  <img src="https://buihuudat.vercel.app/api/live" alt="Live status: weather in Ho Chi Minh City, GitHub stats, latest push, Hacker News and daily quote" width="100%" />
 </p>
 
-<sub>Dữ liệu thật từ Open-Meteo · GitHub API · Hacker News · ZenQuotes — Action `live-status.yml` tự làm mới mỗi 3 tiếng và commit SVG vào repo.</sub>
+<sub>⚡ Realtime: mỗi lần mở trang, server (`api/live.py` trên Vercel) gọi trực tiếp Open-Meteo · GitHub API · Hacker News và vẽ lại SVG — đồng hồ trong ảnh chạy từng giây. Câu quote lấy từ ZenQuotes, được Action `live-status.yml` làm mới mỗi 3 tiếng.</sub>
 
 <!-- ========================================================= -->
 <!--                   GITHUB METRICS                          -->
@@ -217,6 +217,14 @@ const huuDat = {
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/buihuudat/buihuudat/master/metrics.isocalendar.svg" alt="Contribution calendar" width="100%" />
+</p>
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D contribution skyline" width="100%" />
+</p>
+
+<p align="center">
+  <img src="./metrics.stars.svg" alt="Recently starred repositories and topics" width="60%" />
 </p>
 
 <p align="center">
