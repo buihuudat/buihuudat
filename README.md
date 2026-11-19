@@ -3,10 +3,7 @@
 <!-- ========================================================= -->
 
 <p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,35:0f172a,70:1d4ed8,100:2563eb&height=260&section=header&text=HUU%20DAT&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Frontend%20%2F%20Full-Stack%20Developer&descAlignY=61&descSize=20"
-    width="100%"
-  />
+  <img src="./assets/readme/hero-3d.svg" alt="HUU DAT — Frontend / Full-Stack Developer" width="100%" />
 </p>
 
 <p align="center">
@@ -137,6 +134,10 @@ const huuDat = {
 <!-- ========================================================= -->
 
 ## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="./assets/readme/stack-3d.svg" alt="Core stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Redis" width="100%" />
+</p>
 
 <p align="center"><b>Languages & Frontend</b></p>
 <p align="center">
@@ -354,7 +355,7 @@ Repo này chạy được "tự động, tự host" nhờ 2 workflow. Bảng dư
 | Repo nổi bật ở card base | `metrics.yml` → `plugin_repositories_featured` | Liệt kê tên repo, phân tách bằng dấu phẩy |
 | Bật/tắt 1 card metrics | `metrics.yml` | Xoá hẳn step tương ứng (base/languages/achievements/isocalendar) |
 | Múi giờ tính hoạt động | Cả 2 workflow → `config_timezone` / `plugin_languages_analysis_timezone` | VD `Asia/Ho_Chi_Minh` |
-| Màu gradient hero/footer | README → `capsule-render.vercel.app` URL | Đổi tham số `color=0:...,50:...,100:...` (mã hex) |
+| Banner 3D hero/stack/footer | `assets/readme/*.svg` (sinh từ `scripts/gen-readme-3d.py`) | Sửa màu/chữ trong script rồi chạy `python3 scripts/gen-readme-3d.py assets/readme` |
 | Nội dung dòng chữ chạy (typing) | README → `readme-typing-svg.demolab.com` URL | Đổi tham số `lines=` (câu cách nhau bằng `;`, khoảng trắng là `+`) |
 | Badge liên hệ / mạng xã hội | README → mục "Connect With Me" | Đổi link `href`, đổi `logo=` theo tên icon tại simpleicons.org |
 
@@ -386,7 +387,7 @@ Repo này chạy được "tự động, tự host" nhờ 2 workflow. Bảng dư
 <!-- ========================================================= -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,50:1d4ed8,100:020617&height=160&section=footer&animation=fadeIn" width="100%" />
+  <img src="./assets/readme/footer-3d.svg" alt="Build, learn, improve, repeat" width="100%" />
 </p>
 
 <p align="center">
