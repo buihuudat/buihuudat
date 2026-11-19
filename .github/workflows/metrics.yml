@@ -40,7 +40,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: buihuudat
           filename: metrics.languages.svg
-          base: ""
+          base: repositories
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
