@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 27,
-    "code": 3,
-    "day": false,
-    "wind": 5
+    "temp": 26,
+    "code": 0,
+    "day": true,
+    "wind": 2
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-20T14:56:20Z",
+    "last_push": "2026-11-20T23:42:31Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Language Models Can Rewrite Their Own Weights",
-    "score": 110,
-    "comments": 37
+    "title": "Hurried Announcement: Alessandro Masullo GRH",
+    "score": 1376,
+    "comments": 634
   },
   "quote": {
     "text": "Never waste a minute of your precious life thinking about people you don't like.",
