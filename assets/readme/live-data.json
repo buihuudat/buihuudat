@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 35,
+    "temp": 27,
     "code": 3,
-    "day": true,
-    "wind": 4
+    "day": false,
+    "wind": 5
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-20T06:02:00Z",
+    "last_push": "2026-11-20T14:56:20Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
-    "score": 165,
-    "comments": 91
+    "title": "Language Models Can Rewrite Their Own Weights",
+    "score": 110,
+    "comments": 37
   },
   "quote": {
     "text": "Never waste a minute of your precious life thinking about people you don't like.",
