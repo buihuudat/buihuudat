@@ -1,25 +1,25 @@
 {
   "weather": {
-    "temp": 25,
-    "code": 2,
-    "day": false,
-    "wind": 7
+    "temp": 35,
+    "code": 3,
+    "day": true,
+    "wind": 4
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-19T19:59:11Z",
+    "last_push": "2026-11-20T06:02:00Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Anthropic hits $2T in Nasdaq debut",
-    "score": 744,
-    "comments": 1359
+    "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+    "score": 165,
+    "comments": 91
   },
   "quote": {
-    "text": "You are never too old to become younger.",
-    "author": "Mae West"
+    "text": "Never waste a minute of your precious life thinking about people you don't like.",
+    "author": "Celestine Chua"
   }
 }
