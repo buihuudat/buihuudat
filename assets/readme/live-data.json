@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 26,
+    "temp": 24,
     "code": 0,
     "day": true,
-    "wind": 2
+    "wind": 6
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-21T14:16:12Z",
+    "last_push": "2026-11-21T22:48:26Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Derek Lowe: Detonating a Pile of Lead Azide",
-    "score": 246,
-    "comments": 139
+    "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+    "score": 398,
+    "comments": 114
   },
   "quote": {
     "text": "To avoid criticism, do nothing, say nothing, and be nothing.",
