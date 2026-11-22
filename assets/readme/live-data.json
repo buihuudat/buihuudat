@@ -1,8 +1,8 @@
 {
   "weather": {
-    "temp": 27,
+    "temp": 26,
     "code": 2,
-    "day": false,
+    "day": true,
     "wind": 3
   },
   "github": {
@@ -10,13 +10,13 @@
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-22T14:06:38Z",
+    "last_push": "2026-11-22T23:17:06Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Open Social Web Alliance",
-    "score": 83,
-    "comments": 64
+    "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+    "score": 43,
+    "comments": 4
   },
   "quote": {
     "text": "Peace is not the absence of conflict, but the ability to cope with it.",
