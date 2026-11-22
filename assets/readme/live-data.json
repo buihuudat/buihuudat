@@ -1,25 +1,25 @@
 {
   "weather": {
-    "temp": 24,
+    "temp": 35,
     "code": 0,
     "day": true,
-    "wind": 6
+    "wind": 4
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-21T22:48:26Z",
+    "last_push": "2026-11-22T05:29:57Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
-    "score": 398,
-    "comments": 114
+    "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+    "score": 256,
+    "comments": 118
   },
   "quote": {
-    "text": "To avoid criticism, do nothing, say nothing, and be nothing.",
-    "author": "Elbert Hubbard"
+    "text": "Peace is not the absence of conflict, but the ability to cope with it.",
+    "author": "Unknown"
   }
 }
