@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 32,
-    "code": 3,
-    "day": true,
-    "wind": 7
+    "temp": 26,
+    "code": 1,
+    "day": false,
+    "wind": 2
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-23T06:10:15Z",
+    "last_push": "2026-11-23T17:28:20Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
-    "score": 421,
-    "comments": 59
+    "title": "Nvidia Reinstates Jensen Huang as CEO",
+    "score": 1616,
+    "comments": 2735
   },
   "quote": {
     "text": "Have a vision. Be demanding.",
