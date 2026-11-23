@@ -1,25 +1,25 @@
 {
   "weather": {
-    "temp": 26,
-    "code": 2,
+    "temp": 32,
+    "code": 3,
     "day": true,
-    "wind": 3
+    "wind": 7
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-22T23:17:06Z",
+    "last_push": "2026-11-23T06:10:15Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
-    "score": 43,
-    "comments": 4
+    "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+    "score": 421,
+    "comments": 59
   },
   "quote": {
-    "text": "Peace is not the absence of conflict, but the ability to cope with it.",
-    "author": "Unknown"
+    "text": "Have a vision. Be demanding.",
+    "author": "Colin Powell"
   }
 }
