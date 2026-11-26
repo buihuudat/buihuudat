@@ -1,8 +1,8 @@
 {
   "weather": {
-    "temp": 32,
-    "code": 0,
-    "day": true,
+    "temp": 28,
+    "code": 3,
+    "day": false,
     "wind": 6
   },
   "github": {
@@ -10,13 +10,13 @@
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-26T01:37:01Z",
+    "last_push": "2026-11-26T16:27:49Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "1Password Security Incident",
-    "score": 1234,
-    "comments": 520
+    "title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
+    "score": 306,
+    "comments": 126
   },
   "quote": {
     "text": "Keep your eyes on the stars, but remember to keep your feet on the ground.",
