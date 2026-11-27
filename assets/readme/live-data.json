@@ -1,22 +1,22 @@
 {
   "weather": {
-    "temp": 29,
+    "temp": 28,
     "code": 3,
-    "day": true,
-    "wind": 5
+    "day": false,
+    "wind": 2
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-27T01:31:32Z",
+    "last_push": "2026-11-27T08:52:36Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "AI made self-hosting fun again",
-    "score": 302,
-    "comments": 157
+    "title": "The group chat where your AI talks behind your back",
+    "score": 350,
+    "comments": 156
   },
   "quote": {
     "text": "It takes half your life before you discover life is a do-it-yourself project.",
