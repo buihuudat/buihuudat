@@ -1,25 +1,25 @@
 {
   "weather": {
-    "temp": 28,
+    "temp": 29,
     "code": 3,
-    "day": false,
-    "wind": 6
+    "day": true,
+    "wind": 5
   },
   "github": {
     "stars": 41,
     "repos": 114,
     "followers": 5,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-26T16:27:49Z",
+    "last_push": "2026-11-27T01:31:32Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
-    "score": 306,
-    "comments": 126
+    "title": "AI made self-hosting fun again",
+    "score": 302,
+    "comments": 157
   },
   "quote": {
-    "text": "Keep your eyes on the stars, but remember to keep your feet on the ground.",
-    "author": "Theodore Roosevelt"
+    "text": "It takes half your life before you discover life is a do-it-yourself project.",
+    "author": "Napoleon Hill"
   }
 }
