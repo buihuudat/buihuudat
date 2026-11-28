@@ -8,18 +8,18 @@
   "github": {
     "stars": 41,
     "repos": 114,
-    "followers": 5,
+    "followers": 6,
     "last_repo": "buihuudat",
-    "last_push": "2026-11-27T08:52:36Z",
+    "last_push": "2026-11-28T06:40:44Z",
     "last_lang": "CSS"
   },
   "hn": {
-    "title": "GPT 6.2 Astra Solves a Historical Mystery",
-    "score": 221,
-    "comments": 152
+    "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+    "score": 186,
+    "comments": 27
   },
   "quote": {
-    "text": "It takes half your life before you discover life is a do-it-yourself project.",
-    "author": "Napoleon Hill"
+    "text": "High thoughts must have high language.",
+    "author": "Aristophanes"
   }
 }
